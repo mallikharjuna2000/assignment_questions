@@ -1,1 +1,4 @@
-malli
+Q1:
+Write a Java program to input the radius of a circle and calculate its area using the formula:
+Area = π × r²
+Display the result as a floating-point number with two decimal places.
