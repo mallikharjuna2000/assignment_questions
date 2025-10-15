@@ -2,3 +2,65 @@ Q1:
 Write a Java program to input the radius of a circle and calculate its area using the formula:
 Area = π × r²
 Display the result as a floating-point number with two decimal places.
+
+
+Q2)
+ Write a Java program to calculate Simple Interest and Total Amount.
+ Input values should include:
+Principal (double)
+
+
+Rate of Interest in % (double)
+
+
+Time in years (double)
+ Use the formula:
+ Simple Interest = (P × R × T) / 100
+ Display the interest and total amount.
+
+
+Q3:
+ Write a Java program to calculate Compound Interest and Total Amount.
+ Input values should include:
+Principal (double)
+Rate of Interest in % (double)
+Time in years (double)
+
+ Use the formula:
+ Amount = P × (1 + R/100)ᵀ
+ Compound Interest = Amount − Principal
+ Display the compound interest and total amount 
+
+ Q4:
+ Write a Java program to input and display student details.
+ The program should ask the user to enter:
+Name (String)
+Roll Number (int)
+Age (int)
+Grade (String)
+
+ Then, print all the student details in a clear format.
+
+
+Q5)
+Q:
+ Write a Java program to calculate Simple Interest and Compound Interest where the time is entered in months.
+Input:
+Principal amount (double)
+Annual rate of interest in percentage (double)
+Time in months (int)
+Requirements:
+Convert time in months to years.
+Calculate:
+
+Simple Interest using the formula:
+ SI = (Principal × Rate × Time) / 100
+
+Compound Interest using the formula:
+ CI = Principal × (1 + Rate/100)^Time − Principal
+
+Print both interests and their corresponding total amounts.
+Output:
+Time in years (converted from months)
+Simple Interest and Total with Simple Interest
+Compound Interest and Total with Compound Interest
