@@ -800,3 +800,1388 @@ Quantity must be greater than 0.
 4. Checkout and Exit
 Enter your choice: 4
 Thank you! Exiting system
+
+
+Day-10 Assignment Questions
+============================
+
+frequntly asked Interview Questions
+===================================
+Question-1). Multiplication Table – Math Helper App
+
+Scenario:
+A student uses a math app that helps them practice multiplication tables.
+Write a program that takes a number and prints its multiplication table up to 10.
+
+Sample Input:
+
+5
+
+Sample Output:
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+
+
+Test Cases:
+
+testcase-1
+Input: 3
+Output:
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+3 x 4 = 12
+3 x 5 = 15
+3 x 6 = 18
+3 x 7 = 21
+3 x 8 = 24
+3 x 9 = 27
+3 x 10 = 30
+
+testcase-2
+Input: 7
+Output:
+7 x 1 = 7
+...
+7 x 10 = 70
+
+testcase-3
+Input: 10
+Output:
+10 x 1 = 10
+...
+10 x 10 = 100
+
+Question-2). Count Digits – Mobile PIN Analyzer
+
+Scenario:
+A mobile app checks how many digits are in the entered PIN.
+
+Sample Input:
+78956
+
+Sample Output:
+5
+
+
+Test Cases:
+
+testcase-1
+Input: 1234
+Output: 4
+
+testcase-2
+Input: 9
+Output: 1
+
+testcase-3
+Input: 100000
+Output: 6
+
+
+ Question-3).Sum of Digits – Digital Sum Finder
+Scenario:
+A payment app calculates a checksum by summing digits of a transaction ID.
+
+Sample Input:
+1234
+
+Sample Output:
+10
+
+Test Cases:
+
+testcase-1
+Input: 987
+Output: 24
+
+testcase-2
+Input: 56
+Output: 11
+
+testcase-3
+Input: 1005
+Output: 6
+
+ Question-4). Factorial – Combinatorics Calculator
+Scenario:
+A calculator app computes factorials for permutation formulas.
+
+Sample Input:
+5
+
+Sample Output:
+120
+
+Test Cases:
+
+testcase-1
+Input: 3
+Output: 6
+
+testcase-2
+Input: 6
+Output: 720
+
+testcase-3
+Input: 0
+Output: 1
+
+
+ Question-5). Armstrong Number – Number Magic Game
+Scenario:
+A number puzzle app checks if a number is an Armstrong number.
+
+Sample Input:
+153
+
+Sample Output:
+Armstrong Number
+
+
+Test Cases:
+
+testcase-1
+Input: 370
+Output: Armstrong Number
+
+testcase-2
+Input: 371
+Output: Armstrong Number
+
+testcase-3
+Input: 123
+Output: Not Armstrong
+
+
+
+
+Question-6) Reverse Number – Mirror Number App
+
+Scenario:
+A mirror app reverses any number entered by the user.
+
+Sample Input:
+1234
+
+Sample Output:
+4321
+
+Test Cases:
+
+testcase-1
+Input: 9876
+Output: 6789
+
+testcase-2
+Input: 120
+Output: 21
+
+testcase-3
+Input: 1001
+Output: 1001
+
+
+
+
+ Question-7) Palindrome Number – Number Pal Game
+
+Scenario:
+A number game rewards players if the entered number reads the same forward and backward.
+
+Sample Input:
+121
+
+Sample Output:
+Palindrome
+
+
+Test Cases:
+
+testcase-1
+Input: 1221
+Output: Palindrome
+
+testcase-2
+Input: 123
+Output: Not Palindrome
+
+testcase-3
+Input: 101
+Output: Palindrome
+
+
+
+
+Question-8) Fibonacci Series – Nature Sequence Generator
+
+Scenario:
+A biology simulator models growth patterns using Fibonacci numbers.
+
+Sample Input:
+7
+Sample Output:
+0 1 1 2 3 5 8
+
+
+Test Cases:
+
+testcase-1
+Input: 5
+Output: 0 1 1 2 3
+
+testcase-2
+Input: 8
+Output: 0 1 1 2 3 5 8 13
+
+testcase-3
+Input: 10
+Output: 0 1 1 2 3 5 8 13 21 34
+
+
+
+Question-9) Sum of Even and Odd Numbers – Statistics Analyzer
+
+Scenario:
+An analytics app finds the total of even and odd numbers up to a limit n.
+
+Sample Input:
+10
+
+
+Sample Output:
+Sum of even numbers: 30
+Sum of odd numbers: 25
+
+
+Test Cases:
+
+testcase-1
+Input: 5
+Output:
+Sum of even numbers: 6
+Sum of odd numbers: 9
+
+testcase-2
+Input: 8
+Output:
+Sum of even numbers: 20
+Sum of odd numbers: 16
+
+testcase-3
+Input: 3
+Output:
+Sum of even numbers: 2
+Sum of odd numbers: 4
+
+
+
+Question-10) Prime Numbers up to N – Prime Finder Tool
+
+Scenario:
+A cryptography app generates prime numbers up to n for key creation.
+
+Sample Input:
+10
+
+
+Sample Output:
+2 3 5 7
+
+
+Test Cases:
+
+testcase-1
+Input: 5
+Output: 2 3 5
+
+testcase-2
+Input: 15
+Output: 2 3 5 7 11 13
+
+testcase-3
+Input: 20
+Output: 2 3 5 7 11 13 17 19
+
+
+
+
+looping statements and jumping statements Assignment Questions
+=================================================================
+for-loop
+============
+Question-1)
+ Longest Increasing Subsequence (Stock Market App)
+Problem Statement:
+A stock market app analyzes N daily prices to find the length of the longest increasing subsequence — consecutive prices where each day’s price is strictly greater than the previous day’s price.
+You need to write a Java program that reads the number of days (N) and the list of prices, then outputs the length of the longest increasing sequence.
+This helps traders identify upward trends in the market.
+ The program should use loops to track increasing sequences.
+
+Input Format:
+First line: An integer N, the number of daily prices.
+
+
+Second line: N space-separated integers, representing the stock prices.
+
+
+Output Format:
+Print a single integer — the length of the longest increasing subsequence.
+
+
+Example Input:
+5
+1 2 3 4 5
+Example Output:
+5
+
+Test Case 1:
+Input:
+6
+10 20 10 30 40 50
+Output:
+4
+Explanation:
+The longest increasing subsequence is 10 30 40 50, which has length 4.
+
+Test Case 2:
+Input:
+7
+5 5 5 5 5 5 5
+Output:
+1
+Explanation:
+All prices are equal; no increase occurs, so the longest sequence length is 1.
+
+Test Case 3:
+Input:
+8
+3 4 1 2 3 0 1 2
+Output:
+3
+Explanation:
+There are multiple increasing sequences, and the longest (1 2 3) has length 3.
+
+Question-2)
+Sum of Prime Numbers up to N (Math Research Tool)
+Problem Statement:
+A math research tool calculates the sum of all prime numbers up to N to study their distribution.
+ The user inputs a value N, and the program outputs the sum of all prime numbers from 2 to N (inclusive).
+This program helps researchers explore prime number patterns in number theory.
+ The program should use a loop to identify and sum prime numbers.
+Input Format:
+A single integer N.
+
+
+Output Format:
+A single integer — the sum of all prime numbers from 2 to N.
+
+
+
+Example Input:
+10
+Example Output:
+17
+Explanation:
+Prime numbers less than or equal to 10 are 2, 3, 5, and 7.
+ Sum = 2 + 3 + 5 + 7 = 17.
+
+Test Case 1:
+Input:
+5
+Output:
+10
+Explanation:
+Prime numbers ≤ 5 are 2, 3, 5 → Sum = 10.
+
+Test Case 2:
+Input:
+20
+Output:
+77
+Explanation:
+Prime numbers ≤ 20 are 2, 3, 5, 7, 11, 13, 17, 19 → Sum = 77.
+
+Test Case 3:
+Input:
+2
+Output:
+2
+Explanation:
+Only one prime number (2) ≤ 2 → Sum = 2.
+
+
+Question3)Collatz Sequence Length
+Problem Statement:
+A computational mathematics program analyzes the Collatz sequence (also known as the 3n + 1 sequence) for a given positive integer N.
+The sequence is defined as follows:
+Start with any positive integer N.
+
+
+Then, for each term:
+
+
+If the current number is even, divide it by 2.
+
+
+If the current number is odd, multiply it by 3 and add 1.
+
+
+Continue this process until the value becomes 1.
+
+
+The task is to write a program that calculates the total number of terms (including the starting number) in the Collatz sequence for a given N.
+
+Input Format:
+A single integer N (the starting number).
+
+
+Output Format:
+A single integer — the total length of the Collatz sequence (including the starting number).
+
+
+
+Example Input:
+6
+Example Output:
+9
+Explanation:
+The Collatz sequence for 6 is:
+ 6 → 3 → 10 → 5 → 16 → 8 → 4 → 2 → 1
+ There are 9 terms in total, so the output is 9.
+
+Test Case 1:
+Input:
+1
+Output:
+1
+Explanation:
+Sequence: 1 → only one term, so length = 1.
+
+Test Case 2:
+Input:
+7
+Output:
+17
+Explanation:
+The sequence starting from 7 has 17 terms until it reaches 1.
+
+Test Case 3:
+Input:
+10
+Output:
+7
+Explanation:
+Sequence: 10 → 5 → 16 → 8 → 4 → 2 → 1
+ Total terms = 7.
+
+
+Question-4)Palindromic Numbers Counter
+Problem Statement:
+A number puzzle app counts how many palindromic numbers exist from 1 to N.
+ A palindromic number is a number that reads the same forward and backward (for example, 121, 44, 7).
+The user inputs an integer N, and the program outputs how many such palindromic numbers exist between 1 and N (inclusive).
+This helps users explore the interesting properties of numbers.
+ The program should use a loop to check each number.
+
+Input Format:
+A single integer N
+
+
+Output Format:
+A single integer — the count of palindromic numbers from 1 to N
+
+
+
+
+Example Input:
+10
+Example Output:
+9
+Explanation:
+Numbers from 1 to 10 →
+ Palindromic numbers are 1, 2, 3, 4, 5, 6, 7, 8, 9 → total = 9
+
+Test Case 1:
+Input:
+15
+Output:
+14
+Explanation:
+Palindromic numbers from 1 to 15 → 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15
+ Wait — only 11 is palindromic beyond 9 → total = 10
+(Correction applied — only 1–9 and 11 are palindromic → 10 total)
+
+Test Case 2:
+Input:
+50
+Output:
+14
+Explanation:
+Palindromic numbers ≤ 50 →
+ 1–9, 11, 22, 33, 44 → total = 14
+
+Test Case 3:
+Input:
+100
+Output:
+18
+Explanation:
+Palindromic numbers ≤ 100 →
+ 1–9, 11, 22, 33, 44, 55, 66, 77, 88, 99 → total = 18
+
+
+
+While-loop
+=========
+Question-5)Single Digit Numerology (Digit Sum Reduction)
+Problem Statement:
+A numerology app reduces a given number to a single digit by repeatedly summing its digits.
+ For example, if the user enters 123, the app performs the calculation:
+ 1 + 2 + 3 = 6
+If the result still has more than one digit, the process repeats until a single-digit number is obtained.
+The program should use a while loop to perform this digit-summing process.
+ This activity helps users explore mystical number properties in numerology.
+
+ Input Format:
+A single integer N
+
+
+ Output Format:
+A single integer — the single-digit sum after repeated digit reductions.
+
+
+
+Example Input:
+123
+ Example Output:
+6
+Explanation:
+Step 1: 1 + 2 + 3 = 6 → Single digit reached → Output = 6
+
+ Test Case 1:
+Input:
+9999
+Output:
+9
+Explanation:
+9 + 9 + 9 + 9 = 36 → 3 + 6 = 9 → Output = 9
+
+ Test Case 2:
+Input:
+9875
+Output:
+2
+Explanation:
+9 + 8 + 7 + 5 = 29 → 2 + 9 = 11 → 1 + 1 = 2 → Output = 2
+
+ Test Case 3:
+Input:
+5
+Output:
+5
+Explanation:
+Already a single digit → Output = 5
+
+Question-6)Triangular Numbers Generator
+Problem Statement:
+A math app generates triangular numbers, which form a special number pattern:
+ 1, 3, 6, 10, 15, ...
+Each triangular number represents the sum of the first n natural numbers and is given by the formula:
+Tn=n(n+1)2T_n = \frac{n(n + 1)}{2}Tn​=2n(n+1)​
+or additively:
+1
+1 + 2 = 3
+1 + 2 + 3 = 6
+1 + 2 + 3 + 4 = 10
+...
+
+The app takes a number N and prints all triangular numbers less than or equal to N, using a while loop.
+
+ Input Format:
+A single integer N
+
+
+ Output Format:
+Space-separated integers — all triangular numbers ≤ N
+
+
+ Example Input:
+10
+ Example Output:
+1 3 6 10
+
+
+ Test Case 1:
+Input:
+20
+Output:
+1 3 6 10 15
+Explanation:
+Triangular numbers up to 20 are 1, 3, 6, 10, and 15.
+
+ Test Case 2:
+Input:
+5
+Output:
+1 3
+Explanation:
+Triangular numbers ≤ 5 are 1 and 3.
+ Test Case 3:
+Input:
+1
+Output:
+1
+Explanation:
+Only one triangular number (1) ≤ 1.
+
+
+Question-7)Smallest Power Finder
+Problem Statement:
+A scientific app determines the smallest power of K (Kⁱ) that is greater than or equal to N.
+The user inputs two integers N and K, and the program outputs the smallest exponent i such that:
+This concept is useful in exponential growth analysis and computational modeling.
+ The program must use a while loop to compute powers of K until the condition is satisfied.
+ Input Format:
+Two integers N and K, separated by a space.
+
+
+ Output Format:
+A single integer — the smallest exponent i such that Ki≥NK^i \geq NKi≥N.
+
+
+
+ Example Input:
+10 2
+ Example Output:
+4
+
+Explanation:
+2^1 = 2
+2^2 = 4
+2^3 = 8
+2^4 = 16   (first power ≥ 10)
+
+Hence, the smallest exponent i = 4.
+ Test Case 1:
+Input:
+100 3
+Output:
+5
+Explanation:
+3¹=3, 3²=9, 3³=27, 3⁴=81, 3⁵=243 → smallest power ≥ 100 → i = 5.
+
+ Test Case 2:
+Input:
+25 5
+Output:
+2
+Explanation:
+5¹=5, 5²=25 → first power ≥ 25 → i = 2.
+
+ Test Case 3:
+Input:
+50 10
+Output:
+2
+explanation:
+10¹=10, 10²=100 → first power ≥ 50 → i = 2.
+
+Question-8)
+Palindromic Numbers Counter
+Problem Statement:
+A number puzzle app counts how many palindromic numbers (numbers that read the same forward and backward, e.g., 121, 44, 7) exist from 1 to N.
+The user inputs a number N, and the program outputs the count of such numbers between 1 and N (inclusive).
+This problem helps users explore number patterns and symmetry in mathematics.
+ The program must use a while loop to check each number for palindromic properties.
+
+ Input Format:
+A single integer N
+
+
+ Output Format:
+A single integer — the count of palindromic numbers from 1 to N.
+
+
+ Constraints:
+1≤N≤10001 \leq N \leq 10001≤N≤1000
+
+
+Must use a while loop
+
+
+ Example Input:
+10
+
+ Example Output:
+9
+
+Explanation:
+Numbers from 1 to 10 →
+ Palindromic numbers: 1, 2, 3, 4, 5, 6, 7, 8, 9 → total = 9
+
+Test Case 1:
+Input:
+15
+Output:
+10
+Explanation:
+Palindromic numbers ≤ 15 → 1–9, 11 → total = 10
+
+ Test Case 2:
+Input:
+50
+Output:
+14
+Explanation:
+Palindromic numbers ≤ 50 → 1–9, 11, 22, 33, 44 → total = 14
+
+ Test Case 3:
+Input:
+100
+Output:
+18
+Explanation:
+Palindromic numbers ≤ 100 → 1–9, 11, 22, 33, 44, 55, 66, 77, 88, 99 → total = 18
+
+
+Question-9)Sum Until Repeated Number
+Problem Statement:
+A data collection app processes a stream of numbers and sums them until a number is repeated.
+The user enters a sequence of integers (one per line) ending with 0.
+ When the program detects a number that has already appeared before, it includes that number in the sum and then stops reading further input.
+This helps identify data anomalies where values are accidentally duplicated during entry.
+ The program must use a while loop to read input and track previously seen numbers.
+
+ Input Format:
+A sequence of integers, one per line, ending with 0.
+
+
+ Output Format:
+A single integer — the sum of numbers up to and including the first repeated number.
+
+
+Constraints:
+0≤number≤1000 \leq \text{number} \leq 1000≤number≤100
+
+
+Input stops when 0 is entered.
+
+
+Must use a while loop.
+
+
+
+ Example Input:
+1
+2
+1
+0
+
+ Example Output:
+4
+Explanation:
+The numbers entered are: 1, 2, 1
+The second 1 is a repeat, so we sum all numbers up to and including it:
+ 1 + 2 + 1 = 4
+
+
+Test Case 1:
+Input:
+3
+5
+7
+5
+0
+Output:
+20
+Explanation:
+Sequence → 3, 5, 7, 5 → repeat found at 5
+ Sum = 3 + 5 + 7 + 5 = 20
+
+ Test Case 2:
+Input:
+4
+6
+8
+10
+0
+Output:
+28
+Explanation:
+No number repeats before 0 → Sum of all numbers = 28
+
+ Test Case 3:
+Input:
+2
+2
+0
+Output:
+4
+Explanation:
+First repetition found immediately → 2 + 2 = 4
+
+
+
+
+Do-while
+==============
+
+Question-10)Triangular Numbers using Do-While Loop
+Problem Statement:
+A math app generates triangular numbers — numbers that can form an equilateral triangle when represented as dots.
+ The sequence begins as:
+ 1, 3, 6, 10, 15, …
+The n-th triangular number is given by the formula:
+Tn=n(n+1)2T_n = \frac{n(n + 1)}{2}Tn​=2n(n+1)​
+The program should take a number N as input and print all triangular numbers ≤ N, using a do-while loop.
+The do-while loop ensures that the body executes at least once, even if N < 1.
+This task helps students understand additive sequences and loop control structures.
+
+ Input Format:
+A single integer N
+ Output Format:
+Space-separated integers — all triangular numbers ≤ N
+
+
+
+Must use a do-while loop
+
+
+
+ Example Input:
+10
+ Example Output:
+1 3 6 10
+
+ Explanation:
+Triangular numbers ≤ 10 are calculated as:
+ 1 → 1
+ 1 + 2 → 3
+ 1 + 2 + 3 → 6
+ 1 + 2 + 3 + 4 → 10
+Hence, output: 1 3 6 10
+
+ Test Case 1:
+Input:
+20
+Output:
+1 3 6 10 15
+
+ Test Case 2:
+Input:
+3
+Output:
+1 3
+
+ Test Case 3:
+Input:
+1
+Output:
+1
+
+
+Question-11)
+Palindromic Numbers Counter (Do-While Loop)
+Problem Statement:
+A number puzzle app counts palindromic numbers (numbers that read the same forward and backward, e.g., 121) from 1 to N.
+The user inputs a number N, and the program outputs the count of palindromic numbers from 1 to N.
+The do-while loop ensures that at least one number is checked, helping users practice pattern recognition skills.
+
+ Input Format:
+A single integer N
+ Output Format:
+A single integer — the count of palindromic numbers from 1 to N
+
+📋 Constraints:
+1≤N≤10001 \le N \le 10001≤N≤1000
+
+
+Must use a do-while loop
+
+
+ Example Input:
+10
+Example Output:
+9
+Explanation:
+Numbers from 1 to 10 → palindromic numbers: 1, 2, 3, 4, 5, 6, 7, 8, 9 → total = 9
+
+ Test Case 1:
+Input:
+15
+Output:
+10
+Explanation:
+Palindromic numbers ≤ 15 → 1–9, 11 → total = 10
+
+Test Case 2:
+Input:
+50
+Output:
+14
+Explanation:
+Palindromic numbers ≤ 50 → 1–9, 11, 22, 33, 44 → total = 14
+
+ Test Case 3:
+Input:
+100
+Output:
+18
+Explanation:
+Palindromic numbers ≤ 100 → 1–9, 11, 22, 33, 44, 55, 66, 77, 88, 99 → total = 18
+
+
+Question-12) Armstrong Number Check (Do-While Loop)
+Problem Statement:
+A puzzle app checks if a number is an Armstrong number.
+An Armstrong number is a number such that the sum of its digits raised to the power of the number of digits equals the number itself.
+For example:
+153=13+53+33153 = 1^3 + 5^3 + 3^3153=13+53+33
+The program should take a number N as input and output "Armstrong" if it satisfies the condition, or "Not Armstrong" otherwise.
+The do-while loop ensures that at least one digit is processed.
+ Input Format:
+A single integer N
+Output Format:
+A string — "Armstrong" or "Not Armstrong"
+
+ Constraints:
+1≤N≤1091 \le N \le 10^91≤N≤109
+
+
+Must use a do-while loop
+
+
+ Example Input:
+153
+Example Output:
+Armstrong
+
+ Explanation:
+Count digits of N → 153 has 3 digits, so power P = 3.
+
+
+Sum of digits raised to P:
+
+
+13+53+33=1+125+27=1531^3 + 5^3 + 3^3 = 1 + 125 + 27 = 15313+53+33=1+125+27=153
+Compare sum with N → 153 = 153 → Output: "Armstrong"
+
+
+ Test Case 1:
+Input:
+9474
+Output:
+Armstrong
+Explanation:
+9474 has 4 digits → 9^4 + 4^4 + 7^4 + 4^4 = 9474 → "Armstrong"
+
+Test Case 2:
+Input:
+123
+Output:
+Not Armstrong
+Explanation:
+1^3 + 2^3 + 3^3 = 36 ≠ 123 → "Not Armstrong"
+
+
+Question-13)Least Common Multiple (LCM) Using Do-While Loop
+Problem Statement:
+A scheduling app determines the smallest number that is a multiple of both A and B (i.e., the LCM of A and B).
+The user inputs two integers A and B, and the program outputs the smallest common multiple.
+The do-while loop ensures at least one check, helping users iterate efficiently in event planning scenarios.
+
+ Input Format:
+Two integers A and B, separated by a space.
+ Output Format:
+A single integer — the smallest number divisible by both A and B
+
+ Constraints:
+1≤A,B≤1061 \le A, B \le 10^61≤A,B≤106
+
+
+Must use a do-while loop
+
+
+ Example Input:
+5 8
+ Example Output:
+40
+Explanation:
+ Multiples of 8: 8, 16, 24, 32, 40 → first multiple divisible by 5 is 40.
+ Note: The previous output in the image (24) was incorrect.
+
+Test Case 1:
+Input:
+6 9
+Output:
+18
+Explanation:
+Multiples of 9: 9, 18 → first divisible by 6 is 18
+
+ Test Case 2:
+Input:
+12 15
+Output:
+60
+Explanation:
+Multiples of 15: 15, 30, 45, 60 → first divisible by 12 is 60
+
+ Test Case 3:
+Input:
+7 3
+Output:
+21
+Explanation:
+Multiples of 7: 7, 14, 21 → first divisible by 3 is 21
+
+
+Question14)Generate Square Numbers (Do-While Loop)
+Problem Statement:
+A math app generates square numbers:
+1,4,9,16,…1, 4, 9, 16, \dots1,4,9,16,…
+The sequence generation stops when either:
+The square exceeds a given limit N
+
+
+The total count of squares reaches a maximum M
+
+
+The user inputs N and M, and the program outputs the squares.
+The do-while loop ensures that at least one square is generated, helping users understand quadratic sequences.
+
+ Input Format:
+Two integers N and M, separated by a space.
+ Output Format:
+Space-separated integers — square numbers ≤ N, up to M numbers.
+
+ Constraints:
+1≤N≤1061 \le N \le 10^61≤N≤106
+
+
+1≤M≤1001 \le M \le 1001≤M≤100
+
+
+Must use a do-while loop
+
+
+
+ Example Input:
+10 3
+ Example Output:
+1 4 9
+
+ Explanation:
+Start with i = 1
+Calculate i² = 1 → ≤ 10 → print 1
+Increment i = 2 → i² = 4 → ≤ 10 → print 4
+Increment i = 3 → i² = 9 → ≤ 10 → print 9
+Increment i = 4 → i² = 16 → > 10 → stop
+The count of numbers printed is 3, which matches the maximum M = 3.
+
+ Test Case 1:
+Input:
+20 5
+Output:
+1 4 9 16
+Explanation:
+Squares ≤ 20: 1, 4, 9, 16 → count = 4 ≤ M = 5
+
+Test Case 2:
+Input:
+50 3
+Output:
+1 4 9
+Explanation:
+Maximum count M = 3 reached → stop after 3 numbers
+
+Test Case 3:
+Input:
+5 10
+Output:
+1 4
+Explanation:
+Squares ≤ 5: 1, 4 → count = 2 < M = 10 → stop
+
+
+Break and Continue
+=====================
+Question-15) Sum Numbers Until Armstrong (Using Break & Continue)
+Problem Statement:
+A number puzzle app processes a sequence of numbers and sums them until an Armstrong number is encountered.
+Skip zeros: If a number is 0, it is ignored.
+
+
+Stop on Armstrong number: If a number is an Armstrong number (sum of its digits raised to the power of the number of digits equals the number), summation stops immediately.
+
+
+The program outputs the sum of numbers before the first Armstrong number.
+This challenges advanced number recognition and understanding of flow control (break and continue).
+
+ Input Format:
+First line: an integer N — the count of numbers to process.
+
+
+Second line: N space-separated integers — the sequence of numbers.
+
+
+ Output Format:
+A single integer — the sum of numbers before an Armstrong number is encountered.
+
+ Example Input:
+5
+10 20 153 30 40
+ Example Output:
+30
+Explanation:
+Sequence: 10, 20, 153, 30, 40
+
+
+0 → skipped (none here)
+10 + 20 = 30
+153 → first Armstrong number → stop summation
+Output: 30
+
+
+ Test Case 1:
+Input:
+6
+0 5 370 10 0 20
+Output:
+5
+Explanation:
+Skip 0 → sum = 0
+5 → not Armstrong → sum = 5
+370 → Armstrong → stop → output = 5
+
+
+ Test Case 2:
+Input:
+4
+0 1 2 3
+Output:
+0
+Explanation:
+0 → skipped
+1 → Armstrong → stop → output = 0
+
+
+Question-16)Product of Non-Composite Numbers (Using Break & Continue)
+Problem Statement:
+A math app processes a sequence of N numbers and calculates the product of non-composite numbers (1 and prime numbers).
+Skip composite numbers using continue
+
+
+Stop on zero using break (indicating a data boundary)
+
+
+This focuses on primes and ones, challenging number recognition and flow control usage.
+
+ Input Format:
+First line: an integer N — the number of numbers to process
+
+
+Second line: N space-separated integers — the sequence of numbers
+
+
+ Output Format:
+A single integer — the product of all non-composite numbers before a zero is encountered.
+
+ Example Input:
+5
+2 4 3 6 7
+ Example Output:
+42
+Explanation:
+Sequence: 2, 4, 3, 6, 7
+Skip composite numbers: 4 and 6 → ignored
+Multiply non-composite numbers: 2 × 1 × 3 × 1 × 7 → 42
+Output: 42
+
+
+
+ Test Case 1:
+Input:
+6
+1 5 0 3 4 7
+Output:
+5
+Explanation:
+1 → non-composite → multiply: 1
+5 → prime → multiply: 1 × 5 = 5
+0 → stop → output: 5
+
+
+ Test Case 2:
+Input:
+4
+4 6 8 9
+Output:
+1
+Explanation:
+All numbers are composite → skipped → product remains 1
+
+
+
+Question-17)Sum Until Perfect Number (Using Break & Continue)
+Problem Statement:
+A number app sums N numbers until a perfect number is encountered.
+Skip negative numbers using continue
+
+
+Stop on perfect number using break
+
+
+A perfect number is a number equal to the sum of its proper divisors (excluding itself), e.g., 6 = 1+2+3.
+
+ Input Format:
+First line: an integer N — the count of numbers that follow
+
+
+Second line: N space-separated integers — the sequence of numbers
+
+
+
+ Output Format:
+A single integer — the sum of non-negative numbers before a perfect number is encountered.
+
+Constraints:
+1≤N≤1001 \le N \le 1001≤N≤100
+Each number: −1000≤num≤1000-1000 \le \text{num} \le 1000−1000≤num≤1000
+Must use break and continue
+
+
+ Example Input:
+5
+10 -5 20 6 30
+ Example Output:
+30
+Explanation:
+Sequence: 10, -5, 20, 6, 30
+Skip negative numbers: -5 → ignored
+Sum before perfect number 6: 10 + 20 = 30
+Stop on 6 → output: 30
+
+
+
+ Test Case 1:
+Input:
+6
+1 28 -3 12 6 7
+Output:
+1
+Explanation:
+Sequence: 1, 28, -3, 12, 6, 7
+1 → non-negative, not perfect → add: sum = 1
+28 → perfect → stop → output = 1
+
+
+
+ Test Case 2:
+Input:
+4
+-2 -5 -10 6
+Output:
+0
+Explanation:
+All negative numbers → skipped
+6 → perfect → stop → sum = 0
+
+
+Question-18)Sum Numbers Not Divisible by Digit Sum (Using Break & Continue)
+Problem Statement:
+A number app processes N numbers and sums only those numbers that are NOT divisible by the sum of their digits.
+Skip numbers divisible by their digit sum using continue
+Stop on zero using break
+
+
+This explores digit-based number properties.
+
+ Input Format:
+First line: an integer N — the count of numbers that follow
+Second line: N space-separated integers — the sequence of numbers
+
+
+ Output Format:
+A single integer — the sum of numbers not divisible by their digit sum before zero is encountered.
+
+ Constraints:
+Must use break and continue
+
+Number        DigitSum           Divisible by Digit Sum?              Action              Running Sum
+12              1+2=3                 12 % 3 = 0 →Yes                 SKIP                    0
+15              1+5=6                  15 % 6 ≠ 0 → No                ADD                     15
+20              2+0=2                   20 % 2 = 0 → Yes              SKIP                     15
+24               2+4=6                   24 % 6 = 0 → Yes             SKIP                     15
+0                N/A                      STOP                           BREAK                     15
+
+
+
+ Test Case 1:
+Input:
+6
+11 22 33 44 55 0
+Output:
+0
+Explanation: All numbers are divisible by their digit sum → skipped → sum = 0
+
+ Test Case 2:
+Input:
+5
+13 17 19 20 0
+Output:
+49
+Explanation:
+13 → 1+3=4, 13%4≠0 → add → sum=13
+17 → 1+7=8, 17%8≠0 → add → sum=30
+19 → 1+9=10, 19%10≠0 → add → sum=49
+20 → 2+0=2, 20%2=0 → skip
+0 → stop → sum=49
+
+
+Question-19)Sum Numbers with Unique Digits (Using Break & Continue)
+Problem Statement:
+A number app processes N numbers and sums only those numbers that have no repeated digits.
+Skip numbers with repeated digits using continue
+
+
+Stop on negative number using break
+
+
+This tests digit uniqueness in numbers.
+
+ Input Format:
+First line: an integer N — the count of numbers that follow
+
+
+Second line: N space-separated integers — the sequence of numbers
+
+
+ Output Format:
+A single integer — the sum of numbers without repeated digits before a negative number is encountered.
+
+ Example Input:
+5
+12 13 22 34 45
+ Example Output:
+69
+Explanation:
+Number      Repeated Digits?         Action        Running Sum
+12             No                      ADD             12
+13             No                     ADD              25
+22             Yes                   SKIP              25
+34            No                      ADD              59
+45            No                     ADD               104
+
+
+Note: If a negative number occurs, the loop would stop immediately using break.
+
+
