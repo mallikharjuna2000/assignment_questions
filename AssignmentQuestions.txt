@@ -2185,3 +2185,539 @@ Number      Repeated Digits?         Action        Running Sum
 Note: If a negative number occurs, the loop would stop immediately using break.
 
 
+
+
+Day-11 Assignment Questions on single dimesional Array
+============================================================
+Question-1) Question: Maximum Profit Range (Kadane’s Algorithm)
+Topic: Single Dimensional Array Examples
+Scenario
+In the financial hub of TradeCity, a trader records the daily change in stock prices (profits and losses) in an array.
+A positive number means the stock price increased 📈.
+
+
+A negative number means the stock price decreased 📉.
+
+
+Now, the trader wants to know the maximum profit that could be earned by buying and selling within a certain range of days.
+ In other words, for each given range of days [L, R], find the maximum sum of any contiguous subarray within that range.
+If all numbers are negative, return the largest (least negative) single value from that range.
+
+Input Format
+The first line contains two integers:
+n → number of days (size of array)
+q → number of queries.
+
+The second line contains n integers — the daily stock changes.
+Next q lines each contain two integers L and R — the day range (1-based indexing).
+
+Output Format
+For each query, print a single integer — the maximum subarray sum in that range.
+
+TestCase-1
+Input
+5 2
+1 -2 3 4 -5
+1 3
+2 5
+Output
+3
+7
+Explanation
+Query 1: [1, -2, 3] → Max subarray = [3] = 3
+Query 2: [-2, 3, 4, -5] → Max subarray = [3, 4] = 7
+
+
+ TestCase-2
+Input
+6 3
+-2 -3 4 -1 -2 1
+1 6
+1 3
+3 5
+Output
+4
+4
+4
+Explanation
+[ -2, -3, 4, -1, -2, 1 ] → Best subarray [4] = 4
+[ -2, -3, 4 ] → [4] = 4
+[ 4, -1, -2 ] → [4] = 4
+
+
+ TestCase-3
+Input
+4 2
+-5 -2 -8 -1
+1 4
+2 3
+Output
+-1
+-2
+Explanation
+All numbers are negative, so we take the least negative:
+[ -5, -2, -8, -1 ] → -1
+[ -2, -8 ] → -2
+
+
+
+ TestCase-4
+Input
+8 3
+2 3 -6 4 2 -1 2 3
+1 8
+2 5
+4 8
+Output
+7
+6
+10
+Explanation
+1️ Range [1, 8] → [2, 3, -6, 4, 2, -1, 2, 3] → Best subarray [4, 2, -1, 2, 3] = 10
+ 2️ Range [2, 5] → [3, -6, 4, 2] → Best subarray [4, 2] = 6
+ 3️ Range [4, 8] → [4, 2, -1, 2, 3] → Best subarray [4, 2, -1, 2, 3] = 10
+
+ TestCase-5
+Input
+5 2
+10 -3 5 -2 1
+1 5
+2 4
+Output
+11
+5
+Explanation
+[10, -3, 5, -2, 1] → Max subarray [10, -3, 5, -2, 1] = 11
+[ -3, 5, -2 ] → Max subarray [5] = 5
+
+
+
+Question-2) Problem Title: Water Usage Adjustment System – Aquaville City
+Scenario (Question)
+In the city of Aquaville, the municipal water system monitors the daily water usage at different stations, represented as an array.
+During maintenance periods, adjustments are made to the water usage records by adding or subtracting a given value across a range of stations.
+ However, water usage at any station can never become negative — if an operation would reduce a station’s usage below zero, it should be reset to 0.
+You must simulate all the maintenance adjustments and display the final water usage at all stations after all operations.
+
+Input Format
+First line: Two integers —
+N → Number of stations (array size)
+Q → Number of queries (maintenance operations)
+Second line: N integers — initial water usage of each station.
+Next Q lines: Each line has three integers L, R, X
+L = starting index (1-based)
+R = ending index (1-based)
+X = adjustment value (positive for addition, negative for subtraction)
+
+
+
+Output Format
+Print N integers — the final water usage at each station after all queries,
+ ensuring that no station has a negative value.
+Constraints
+1 ≤ N, Q ≤ 1000
+
+Example Input
+5 2
+10 20 30 40 50
+1 3 -5
+2 4 10
+Example Output
+5 25 35 50 50
+
+Explanation
+1️ Query 1: Subtract 5 from stations 1–3
+ Initial → [10, 20, 30, 40, 50]
+ After Query 1 → [5, 15, 25, 40, 50]
+2️ Query 2: Add 10 from stations 2–4
+ After Query 2 → [5, 25, 35, 50, 50]
+ Final Output → 5 25 35 50 50
+
+Test Cases
+ Test Case 1
+Input
+5 2
+10 20 30 40 50
+1 3 -5
+2 4 10
+Output
+5 25 35 50 50
+Explanation:
+ Subtract 5 (1–3): [5,15,25,40,50]
+ Add 10 (2–4): [5,25,35,50,50]
+
+ Test Case 2
+Input
+4 3
+5 10 15 20
+1 2 -10
+2 3 5
+3 4 -20
+Output
+0 5 0 0
+Explanation:
+ 1️ Subtract 10 (1–2): [0,0,15,20]
+ 2️ Add 5 (2–3): [0,5,20,20]
+ 3️ Subtract 20 (3–4): [0,5,0,0]
+
+ Test Case 3
+Input
+6 2
+8 12 10 5 15 20
+3 6 -8
+1 4 5
+Output
+13 17 7 2 7 12
+Explanation:
+ 1️ Subtract 8 (3–6): [8,12,2,0,7,12]
+ 2️ Add 5 (1–4): [13,17,7,5,7,12] → But (station 4) 5 is correct since no negative applied.
+
+ Test Case 4
+Input
+5 1
+3 0 2 4 1
+2 5 -3
+Output
+3 0 0 1 0
+Explanation:
+ Subtract 3 (2–5): [3,-3,-1,1,-2] → [3,0,0,1,0]
+
+ Test Case 5
+Input
+5 3
+100 200 300 400 500
+1 5 -50
+3 5 -400
+2 4 100
+Output
+50 250 0 100 100
+Explanation:
+ 1️ Subtract 50 (1–5): [50,150,250,350,450]
+ 2️ Subtract 400 (3–5): [50,150,0,0,50]
+ 3️ Add 100 (2–4): [50,250,100,100,50]
+
+
+
+Question-3) Question: MusicFest Ticket Rotation
+Problem Statement:
+In the grand MusicFest, a row of seats is allocated tickets with specific values (representing ticket types) in an array.
+The organizer wants to reallocate tickets in specific ranges by rotating the values to the left.
+For example:
+ If [1, 2, 3] is rotated left by 1, it becomes [2, 3, 1].
+You need to write a program that:
+Processes multiple rotation queries.
+
+
+Each query defines:
+
+
+The start and end range of seats.
+
+
+The number of left rotations.
+
+
+Finally, print the updated ticket arrangement after all queries.
+
+
+Input Format:
+The first line contains two integers —
+ N → number of seats (array size)
+ Q → number of rotation queries
+
+
+The second line contains N integers — the initial ticket values.
+
+
+The next Q lines each contain three integers:
+
+
+L → start index (1-based)
+
+
+R → end index (1-based)
+
+
+K → number of left rotations to apply within that range
+
+
+
+Output Format:
+Print N integers — the final ticket values after all rotation queries.
+Example Input:
+5 2
+1 2 3 4 5
+1 3 1
+2 4 2
+Example Output:
+2 4 3 1 5
+
+Explanation:
+Initial: [1, 2, 3, 4, 5]
+
+Query 1 → Rotate elements from index 1 to 3 left by 1 → [2, 3, 1, 4, 5]
+Query 2 → Rotate elements from index 2 to 4 left by 2 → [2, 4, 3, 1, 5]
+Final Output → 2 4 3 1 5
+
+
+Sample Test Cases
+ Test Case 1
+Input:
+5 2
+1 2 3 4 5
+1 3 1
+2 4 2
+Output:
+2 4 3 1 5
+
+Explanation:
+Rotate [1,2,3] → [2,3,1]
+Then rotate [3,1,4] → [4,3,1]
+ Final: [2,4,3,1,5]
+
+
+
+Test Case 2
+Input:
+6 1
+10 20 30 40 50 60
+2 5 3
+Output:
+10 40 50 60 20 60
+Explanation:
+ Range [20, 30, 40, 50] rotated left by 3 → [50, 20, 30, 40]
+ Final array → [10, 50, 20, 30, 40, 60]
+
+ Test Case 3
+Input:
+4 3
+5 10 15 20
+1 4 1
+2 3 1
+1 2 2
+output:
+10 15 20 5
+Explanation:
+Rotate [5,10,15,20] → [10,15,20,5]
+Rotate [15,20] → [20,15] → [10,20,15,5]
+Rotate [10,20] by 2 → no change (full cycle).
+Final: [10,15,20,5]
+
+ Test Case 4
+Input:
+5 2
+9 8 7 6 5
+1 5 2
+2 4 1
+Output:
+7 6 8 5 9
+Explanation:
+Rotate [9,8,7,6,5] left by 2 → [7,6,5,9,8]
+Rotate [6,5,9] left by 1 → [5,9,6]
+ Final: [7,5,9,6,8]
+
+
+Question-4) Question: Library Fine Calculation
+Problem Statement:
+In the Bookhaven Library, daily overdue fines are recorded in an array — each element representing the fine for a specific book.
+The librarian wants to calculate the total fine for specific ranges of books, but with a limit:
+If the total fine in a range exceeds a given threshold (T), it should be capped at that threshold.
+You must write a program that:
+Processes multiple fine calculation queries.
+
+
+Each query specifies a book range (L to R) and a threshold (T).
+
+
+Outputs the total fine for that range — capped at the threshold value.
+
+
+Input Format:
+The first line contains two integers —
+ N → number of books (array size)
+ Q → number of queries
+
+
+The second line contains N integers — daily fines for each book.
+
+
+The next Q lines each contain three integers:
+L → start index (1-based)
+R → end index (1-based)
+T → threshold (maximum allowable total fine)
+Output Format:
+For each query, print a single integer —
+ the total fine for the given range, capped at T if necessary.
+Example Input:
+5 2
+10 20 30 40 50
+1 3 50
+2 4 100
+Example Output:
+50
+90
+Explanation:
+Query 1:
+ Range (1–3) → 10 + 20 + 30 = 60 → exceeds threshold (50) → output 50
+
+
+Query 2:
+ Range (2–4) → 20 + 30 + 40 = 90 → less than threshold (100) → output 90
+Sample Test Cases
+Test Case 1
+Input:
+5 2
+10 20 30 40 50
+1 3 50
+2 4 100
+
+Output:
+50
+90
+Explanation:
+(1–3): 10 + 20 + 30 = 60 → exceeds 50 → capped to 50
+(2–4): 20 + 30 + 40 = 90 → within 100 → 90
+
+
+ Test Case 2
+Input:
+6 3
+5 15 25 35 45 55
+1 4 60
+3 6 100
+2 5 80
+
+Output:
+60
+100
+80
+
+Explanation:
+(1–4): 5+15+25+35=80 → exceeds 60 → output 60
+(3–6): 25+35+45+55=160 → exceeds 100 → output 100
+(2–5): 15+25+35+45=120 → exceeds 80 → output 80
+
+
+ Test Case 3
+Input:
+4 2
+12 8 10 5
+1 2 30
+2 4 20
+
+Output:
+20
+20
+
+Explanation:
+(1–2): 12 + 8 = 20 → within threshold 30 → 20
+(2–4): 8 + 10 + 5 = 23 → exceeds 20 → capped to 20
+
+
+
+ Test Case 4
+Input:
+5 2
+0 0 10 20 30
+3 5 100
+1 2 5
+
+Output:
+60
+0
+
+Explanation:
+(3–5): 10 + 20 + 30 = 60 → less than 100 → 60
+(1–2): 0 + 0 = 0 → within 5 → 0
+
+
+
+Question-5) StoreMax Stock Balancing
+Problem Statement:
+In the StoreMax warehouse, stock levels of items are recorded in an array.
+To balance stock across sections, the manager wants to equalize stock in specific ranges by setting all values in the range to the median of that range:
+Odd-length range: use the middle element after sorting.
+Even-length range: use the lower middle (element at index (length - 1) / 2 after sorting).
+
+
+You must write a program that:
+Processes multiple balancing queries.
+Outputs the final stock levels after all queries.
+
+
+Input Format:
+First line: Two integers
+N → number of items (array size)
+Q → number of queries
+Second line: N integers — initial stock levels of each item.
+Next Q lines: Two integers L and R (1-based indices) representing the range for each query.
+
+
+Output Format:
+Print N integers — the final stock levels after all balancing queries.
+Constraints:
+1 ≤ N, Q ≤ 1000
+
+Example Input:
+5 2
+10 50 30 20 40
+1 3
+2 5
+Example Output:
+30 30 30 30 30
+
+Explanation (Step-by-Step):
+Initial array: [10, 50, 30, 20, 40]
+Query 1: 1–3 → subarray [10,50,30] → sorted [10,30,50] → median = 30
+Update positions 1–3 → [30,30,30,20,40]
+Query 2: 2–5 → subarray [30,30,20,40] → sorted [20,30,30,40] → median = 30
+Update positions 2–5 → [30,30,30,30,30]
+ Final array: [30,30,30,30,30]
+Sample Test Cases
+ Test Case 1
+Input:
+5 2
+10 50 30 20 40
+1 3
+2 5
+Output:
+30 30 30 30 30
+Explanation:
+Query1 → median 30 → [30,30,30,20,40]
+Query2 → median 30 → [30,30,30,30,30]
+
+
+ Test Case 2
+Input:
+6 2
+5 15 25 10 20 30
+1 4
+3 6
+Output:
+10 10 20 20 20 20
+Explanation:
+Query1 → subarray [5,15,25,10] → sorted [5,10,15,25] → median = 10 → update → [10,10,10,10,20,30]
+Query2 → subarray [10,10,20,30] → sorted [10,10,20,30] → median = 20 → update → [10,10,20,20,20,20]
+
+
+ Test Case 3
+Input:
+4 1
+8 4 12 6
+1 4
+Output:
+6 6 6 6
+Explanation:
+Query → subarray [8,4,12,6] → sorted [4,6,8,12] → median = 6 → update all → [6,6,6,6]
+
+
+ Test Case 4
+Input:
+7 3
+1 7 3 9 5 2 8
+1 3
+4 7
+2 5
+Output:
+3 3 3 5 5 5 5
+
