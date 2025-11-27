@@ -10612,3 +10612,204 @@ Sample Test Case 3
  Explanation
  Array index invalid.
 -----------------------------------------------------------------------------------------------------
+Day-36 CustomException
+-------------------------
+QUESTION 1
+Create a custom exception NegativeNumberException and write a method checkPositive(int num) that throws this exception if the input is negative. Return "Positive" if valid.
+Input Format
+ One integer (-1000 to 1000)
+Output Format
+ Print "Positive" or "NegativeNumberException"
+Sample Test Case 1
+ Input
+ 10
+ Output
+ Positive
+ Explanation
+ 10 is not negative → valid.
+Sample Test Case 2
+ Input
+ 0
+ Output
+ Positive
+ Explanation
+ Zero is allowed.
+Sample Test Case 3
+ Input
+ -5
+ Output
+ NegativeNumberException
+ Explanation
+ -5 is negative → custom exception thrown.
+--------------------------------------------------------------------------------------------------
+QUESTION 2
+Create a custom exception InvalidAgeException and write a method setAge(int age) that throws this exception if the age is negative or greater than 150. Return "Age set" if valid.
+Input Format
+ One integer (-1000 to 1000)
+Output Format
+ Print "Age set" or "InvalidAgeException"
+Sample Test Case 1
+ Input
+ 30
+ Output
+ Age set
+ Explanation
+ 30 is valid.
+Sample Test Case 2
+ Input
+ 0
+ Output
+ Age set
+ Explanation
+ 0 allowed.
+Sample Test Case 3
+ Input
+ 200
+ Output
+ InvalidAgeException
+ Explanation
+ Age >150 → custom exception thrown.
+ ---------------------------------------------------------------------------------------------
+ QUESTION 3
+Create a custom exception InvalidScoreException and write a method setScore(int score) that throws this exception if the score is not between 0 and 100. Return "Score set" if valid.
+Input Format
+ One integer (-1000 to 1000)
+Output Format
+ Print "Score set" or "InvalidScoreException"
+Sample Test Case 1
+ Input
+ 90
+ Output
+ Score set
+ Explanation
+ Valid score.
+Sample Test Case 2
+ Input
+ 101
+ Output
+ InvalidScoreException
+ Explanation
+ Score > 100 → invalid.
+Sample Test Case 3
+ Input
+ -10
+ Output
+ InvalidScoreException
+ Explanation
+ Negative score → invalid.
+----------------------------------------------------------------------------------------------------
+QUESTION 4
+Create an unchecked custom exception InvalidInputException (extending RuntimeException) and write a method validateInput(String input) that throws this exception if the input is null or empty. Return "Valid" if non-empty.
+Input Format
+ A string ("null" means actual null)
+Output Format
+ Print "Valid" or "InvalidInputException"
+Sample Test Case 1
+ Input
+ data
+ Output
+ Valid
+ Explanation
+ String is non-empty → valid.
+Sample Test Case 2
+ Input
+ null
+ Output
+ InvalidInputException
+ Explanation
+ Null input → runtime custom exception.
+Sample Test Case 3
+ Input
+ code
+ Output
+ Valid
+ Explanation
+ Valid string.
+----------------------------------------------------------------------------------------------------
+QUESTION 5
+Create a custom exception InvalidEmailException and write a method checkEmail(String email) that throws this exception if the email does not contain '@'. Return "Valid email" if valid.
+Input Format
+ A string ("null" means actual null)
+Output Format
+ Print "Valid email" or "InvalidEmailException"
+Sample Test Case 1
+ Input
+ user@domain.com
+ Output
+ Valid email
+ Explanation
+ Email contains '@'.
+Sample Test Case 2
+ Input
+ invalid
+ Output
+ InvalidEmailException
+ Explanation
+ No '@' → invalid email.
+Sample Test Case 3
+ Input
+ null
+ Output
+ InvalidEmailException
+ Explanation
+ Null → invalid.
+---------------------------------------------------------------------------------------------------------
+QUESTION 6
+Create a custom exception InsufficientBalanceException and write a method withdraw(int balance, int amount) that throws this exception if the amount exceeds the balance. Return "Withdrawn" if valid.
+Input Format
+ Two integers: balance and amount (0 to 10000)
+Output Format
+ Print "Withdrawn" or "InsufficientBalanceException"
+Sample Test Case 1
+ Input
+ 2000
+ 1000
+ Output
+ Withdrawn
+ Explanation
+ Amount ≤ balance → valid.
+Sample Test Case 2
+ Input
+ 500
+ 600
+ Output
+ InsufficientBalanceException
+ Explanation
+ Amount > balance → invalid.
+Sample Test Case 3
+ Input
+ 1000
+ 1000
+ Output
+ Withdrawn
+ Explanation
+ Equal amount allowed.
+---------------------------------------------------------------------------------------------------
+QUESTION 7
+Create a custom exception InvalidUsernameException and write a method checkUsername(String username) that throws this exception if the username is shorter than 5 characters. Return "Valid username" if valid.
+Input Format
+ A string (null or length 0 to 100)
+Output Format
+ Print "Valid username" or "InvalidUsernameException"
+Sample Test Case 1
+ Input
+ alice
+ Output
+ Valid username
+ Explanation
+ Length ≥ 5 → valid.
+Sample Test Case 2
+ Input
+ bob
+ Output
+ InvalidUsernameException
+ Explanation
+ Length < 5 → invalid.
+Sample Test Case 3
+ Input
+ null
+ Output
+ InvalidUsernameException
+ Explanation
+ Null → invalid.
+ ---------------------------------------------------------------------------------------------
