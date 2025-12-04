@@ -11262,3 +11262,631 @@ Output
 Balance: 400
 
 -------------------------------------------------------------------------------------------------------
+
+Min and Max Priorities Thread problems
+--------------------------------------
+1 — Print numbers 1..n using two threads with MAX and MIN priorities
+Problem Statement
+ Create two threads to print numbers from 1 to n. One thread uses MAX_PRIORITY with label High, the other uses MIN_PRIORITY with label Low. Start and wait for the high-priority thread first so its output appears before the low-priority thread.
+Input Format:
+ First line: integer n
+Output Format:
+ Two lines:
+High: <numbers 1..n>
+Low: <numbers 1..n>
+
+Example:
+ Input:
+5
+
+Output:
+High: 1 2 3 4 5
+Low: 1 2 3 4 5
+
+Sample Testcases
+ Sample 1 Input:
+1
+
+Output:
+High: 1
+Low: 1
+
+Sample 2 Input:
+3
+
+Output:
+High: 1 2 3
+Low: 1 2 3
+
+Sample 3 Input:
+4
+
+Output:
+High: 1 2 3 4
+Low: 1 2 3 4
+
+------------------------------------------------------------------------------------------------------
+2 — Print a string n times using threads with NORM and MAX priorities
+Problem Statement
+ Create two threads to print a given string n times. One thread uses MAX_PRIORITY (label High), the other NORM_PRIORITY (label Normal). Run high-priority first so its output appears first.
+Input Format:
+ First line: integer n
+ Second line: string s
+Output Format:
+ Two lines:
+High: <s repeated n times>
+Normal: <s repeated n times>
+
+Example:
+ Input:
+3
+Hello
+
+Output:
+High: Hello Hello Hello
+Normal: Hello Hello Hello
+
+Sample Testcases
+ Sample 1 Input:
+1
+Hi
+
+Output:
+High: Hi
+Normal: Hi
+
+Sample 2 Input:
+2
+Test
+
+Output:
+High: Test Test
+Normal: Test Test
+
+Sample 3 Input:
+3
+Java
+
+Output:
+High: Java Java Java
+Normal: Java Java Java
+-------------------------------------------------------------------------------------------------------
+3 — Countdown using threads with MIN and MAX priorities
+Problem Statement
+ Create two threads to print countdown from n to 1. One labeled High with MAX_PRIORITY and one labeled Low with MIN_PRIORITY. Start and wait for High first.
+Input Format:
+ First line: integer n
+Output Format:
+ Two lines:
+High: n n-1 ... 1
+Low: n n-1 ... 1
+
+Example:
+ Input:
+5
+
+Output:
+High: 5 4 3 2 1
+Low: 5 4 3 2 1
+
+Sample Testcases
+ Sample 1 Input:
+1
+
+Output:
+High: 1
+Low: 1
+
+Sample 2 Input:
+3
+
+Output:
+High: 3 2 1
+Low: 3 2 1
+
+Sample 3 Input:
+4
+
+Output:
+High: 4 3 2 1
+Low: 4 3 2 1
+
+----------------------------------------------------------------------------------------------------
+4 — Print odd/even up to n using NORM and MIN priorities
+Problem Statement
+ Use two threads: Normal (NORM_PRIORITY) prints odd numbers 1..n, Low (MIN_PRIORITY) prints even numbers 1..n. Start and wait for Normal first.
+Input Format:
+ First line: integer n
+Output Format:
+ Two lines:
+Normal: <odd numbers>
+Low: <even numbers>
+
+Example:
+ Input:
+6
+
+Output:
+Normal: 1 3 5
+Low: 2 4 6
+
+Sample Testcases
+ Sample 1 Input:
+2
+
+Output:
+Normal: 1
+Low: 2
+
+Sample 2 Input:
+4
+
+Output:
+Normal: 1 3
+Low: 2 4
+
+Sample 3 Input:
+8
+
+Output:
+Normal: 1 3 5 7
+Low: 2 4 6 8
+
+-----------------------------------------------------------------------------------------------------
+5 — Increment shared counter using three threads with MAX, NORM, MIN priorities
+Problem Statement
+ Create three threads with priorities MAX, NORM, and MIN. Each thread increments a shared counter n times. Print final counter value.
+Input Format:
+ First line: integer n (increments per thread)
+Output Format:
+ Single integer — final counter value.
+Example:
+ Input:
+5
+
+Output:
+15
+
+Sample Testcases
+ Sample 1 Input:
+1
+
+Output:
+3
+
+Sample 2 Input:
+3
+
+Output:
+9
+
+Sample 3 Input:
+10
+
+Output:
+30
+
+---------------------------------------------------------------------------------------------------'
+6 — Print squares 1..n using MAX and NORM priorities
+Problem Statement
+ Two threads print squares 1^2..n^2. High uses MAX_PRIORITY, Normal uses NORM_PRIORITY. Start High first.
+Input Format:
+ First line: integer n
+Output Format:
+ Two lines:
+High: <squares>
+Normal: <squares>
+
+Example:
+ Input:
+4
+
+Output:
+High: 1 4 9 16
+Normal: 1 4 9 16
+
+Sample Testcases
+ Sample 1 Input:
+1
+
+Output:
+High: 1
+Normal: 1
+
+Sample 2 Input:
+2
+
+Output:
+High: 1 4
+Normal: 1 4
+
+Sample 3 Input:
+3
+
+Output:
+High: 1 4 9
+Normal: 1 4 9
+------------------------------------------------------------------------------------------------
+7 — Factorial using threads with NORM and MIN priorities
+Problem Statement
+ Two threads compute factorial of n. High uses NORM_PRIORITY, Low uses MIN_PRIORITY. Start High first then Low. Each prints Label: <factorial>.
+Input Format:
+ First line: integer n
+Output Format:
+ Two lines:
+High: <n!>
+Low: <n!>
+
+Example:
+ Input:
+5
+
+Output:
+High: 120
+Low: 120
+
+Sample Testcases
+ Sample 1 Input:
+1
+
+Output:
+High: 1
+Low: 1
+
+Sample 2 Input:
+3
+
+Output:
+High: 6
+Low: 6
+
+Sample 3 Input:
+6
+
+Output:
+High: 720
+Low: 720
+------------------------------------------------------------------------------------------------------
+8 — Print characters using MAX and MIN priorities
+Problem Statement
+ Two threads print characters of a string. High uses MAX_PRIORITY, Low uses MIN_PRIORITY. Start High first.
+Input Format:
+ Single line: string s
+Output Format:
+ Two lines:
+High: <chars separated by spaces>
+Low: <chars separated by spaces>
+
+Example:
+ Input:
+ABC
+
+Output:
+High: A B C
+Low: A B C
+
+Sample Testcases
+ Sample 1 Input:
+A
+
+Output:
+High: A
+Low: A
+
+Sample 2 Input:
+XY
+
+Output:
+High: X Y
+Low: X Y
+
+Sample 3 Input:
+TEST
+
+Output:
+High: T E S T
+Low: T E S T
+
+----------------------------------------------------------------------------------------------------------
+9 — Reverse a string using three threads with MAX, NORM, MIN priorities
+Problem Statement
+ Create three threads with priorities MAX, NORM, MIN that each reverse the given string and print Label: <reversed>. Start and wait them in that order.
+Input Format:
+ Single line: string s
+Output Format:
+ Three lines:
+High: <reversed>
+Normal: <reversed>
+Low: <reversed>
+
+Example:
+ Input:
+HELLO
+
+Output:
+High: OLLEH
+Normal: OLLEH
+Low: OLLEH
+
+Sample Testcases
+ Sample 1 Input:
+A
+
+Output:
+High: A
+Normal: A
+Low: A
+
+Sample 2 Input:
+XY
+
+Output:
+High: YX
+Normal: YX
+Low: YX
+
+Sample 3 Input:
+THREAD
+
+Output:
+High: DAERHT
+Normal: DAERHT
+Low: DAERHT
+-----------------------------------------------------------------------------------------------
+10 — Print primes up to n using NORM and MIN priorities
+Problem Statement
+ Two threads print prime numbers ≤ n. Normal (NORM_PRIORITY) prints first, then Low (MIN_PRIORITY). Each prints as Label: <primes>; if none, print Label: 0.
+Input Format:
+ First line: integer n
+Output Format:
+ Two lines:
+Normal: <primes or 0>
+Low: <primes or 0>
+
+Example:
+ Input:
+10
+
+Output:
+Normal: 2 3 5 7
+Low: 2 3 5 7
+
+Sample Testcases
+ Sample 1 Input:
+0
+
+Output:
+Normal: 0
+Low: 0
+
+Sample 2 Input:
+3
+
+Output:
+Normal: 2 3
+Low: 2 3
+
+Sample 3 Input:
+20
+
+Output:
+Normal: 2 3 5 7 11 13 17 19
+Low: 2 3 5 7 11 13 17 19
+-----------------------------------------------------------------------------------------------------11 — Sum of array using MAX and NORM priorities
+Problem Statement
+ Two threads compute the sum of an integer array. High uses MAX_PRIORITY, Normal uses NORM_PRIORITY. Each prints Label: <sum>.
+Input Format:
+ First line: integer len (array length)
+ Next len integers: array elements
+Output Format:
+ Two lines:
+High: <sum>
+Normal: <sum>
+
+Example:
+ Input:
+4
+1 2 3 4
+
+Output:
+High: 10
+Normal: 10
+
+
+Sample Testcases
+ Sample 1 Input:
+1
+1
+
+Output:
+High: 1
+Normal: 1
+
+Sample 2 Input:
+2
+1 2
+
+Output:
+High: 3
+Normal: 3
+
+Sample 3 Input:
+4
+10 20 30 40
+
+Output:
+High: 100
+Normal: 100
+--------------------------------------------------------------------------------------------------
+12 — Palindrome check using NORM and MAX priorities
+Problem Statement
+ Two threads check whether a given integer is a palindrome. High uses MAX_PRIORITY, Normal uses NORM_PRIORITY. Each prints Label: Palindrome or Label: Not Palindrome.
+Input Format:
+ First line: integer number
+Output Format:
+ Two lines:
+High: Palindrome|Not Palindrome
+Normal: Palindrome|Not Palindrome
+
+Example:
+ Input:
+121
+
+Output:
+High: Palindrome
+Normal: Palindrome
+
+Sample Testcases
+ Sample 1 Input:
+121
+
+Output:
+High: Palindrome
+Normal: Palindrome
+
+Sample 2 Input:
+123
+
+Output:
+High: Not Palindrome
+Normal: Not Palindrome
+
+Sample 3 Input:
+1221
+
+Output:
+High: Palindrome
+Normal: Palindrome
+--------------------------------------------------------------------------------------------------------
+13 — Simulate bank transactions using MAX and MIN priorities
+Problem Statement
+ Two threads perform n deposits and withdrawals of a given amount and print final balance as Label: Balance: X. One thread labeled High has MAX_PRIORITY, the other Low has MIN_PRIORITY. Each thread simulates deposit & withdraw n times and then an extra deposit so printed balances match earlier samples.
+Input Format:
+ First line: integer amount
+ Second line: integer n
+Output Format:
+ Two lines:
+High: Balance: X
+Low: Balance: X
+
+Example:
+ Input:
+1000
+2
+
+Output:
+High: Balance: 1000
+Low: Balance: 1000
+
+
+Sample Testcases
+ Sample 1 Input:
+100
+1
+
+Output:
+High: Balance: 100
+Low: Balance: 100
+
+Sample 2 Input:
+500
+2
+
+Output:
+High: Balance: 500
+Low: Balance: 500
+
+Sample 3 Input:
+200
+3
+
+Output:
+High: Balance: 200
+Low: Balance: 200
+------------------------------------------------------------------------------------------------------
+14 — Print a number n times using MAX and NORM priorities
+Problem Statement
+ Two threads print a given number n times. High uses MAX_PRIORITY, Normal uses NORM_PRIORITY. Start High first.
+Input Format:
+ First line: integer n
+ Second line: integer number
+Output Format:
+ Two lines:
+High: <number repeated n times>
+Normal: <number repeated n times>
+
+Example:
+ Input:
+4
+5
+
+Output:
+High: 5 5 5 5
+Normal: 5 5 5 5
+
+Sample Testcases
+ Sample 1 Input:
+1
+3
+
+Output:
+High: 3
+Normal: 3
+
+Sample 2 Input:
+2
+7
+
+Output:
+High: 7 7
+Normal: 7 7
+
+Sample 3 Input:
+5
+10
+
+Output:
+High: 10 10 10 10 10
+Normal: 10 10 10 10 10
+
+--------------------------------------------------------------------------------------------------------
+15 — Print "Start" and "End" using MIN and NORM priorities
+Problem Statement
+ Two threads print messages Start and End n times. Thread Normal (NORM_PRIORITY) prints Start, Low (MIN_PRIORITY) prints End. Start and wait Normal first.
+Input Format:
+ First line: integer n
+Output Format:
+ Two lines:
+Normal: Start Start ...
+Low: End End ...
+
+Example:
+ Input:
+2
+
+Output:
+Normal: Start Start
+Low: End End
+
+Sample Testcases
+ Sample 1 Input:
+1
+
+Output:
+Normal: Start
+Low: End
+
+Sample 2 Input:
+3
+
+Output:
+Normal: Start Start Start
+Low: End End End
+
+Sample 3 Input:
+5
+
+Output:
+Normal: Start Start Start Start Start
+Low: End End End End End
+------------------------------------------------------------------------------------------------------------
