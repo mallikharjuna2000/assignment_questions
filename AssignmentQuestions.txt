@@ -12400,3 +12400,419 @@ Sample 3
 Output:
 AAAAAAAAAA
 ------------------------------------------------------------------------------------------------------
+Day-42 key Interfaces examples
+===================================
+1) Add n elements to a List and print them
+Problem: Write a program to add n elements to a List and print them.
+Input format:
+ First token: n
+ Next n integers: a1 a2 ... an
+Output format:
+ Space-separated list elements in the same order.
+Sample testcases
+Input:
+
+
+3
+1 2 3
+
+Output:
+1 2 3
+
+Input:
+
+
+2
+10 20
+
+Output:
+10 20
+
+Input:
+
+
+5
+1 2 3 4 5
+
+Output:
+1 2 3 4 5
+---------------------------------------------------------------------------------------------------
+2) Remove duplicates from a List using a Set
+Problem: Write a program to remove duplicates from a list using a Set. Preserve input order where possible.
+Input format:
+ First token: size (number of elements)
+ Next size integers: elements
+Output format:
+ Space-separated unique elements in first-seen order.
+Sample testcases
+
+Input:
+5
+1 2 2 3 3
+
+Output:
+1 2 3
+
+Input:
+2
+1 1
+
+Output:
+1
+
+Input:
+6
+1 2 3 3 4 4
+
+Output:
+1 2 3 4
+
+--------------------------------------------------------------------------------------
+3) Add n elements to a Queue and print them (FIFO)
+Problem: Use a LinkedList as a Queue to add n elements and print them in FIFO order.
+Input format:
+ First token: n
+ Next n integers: a1 a2 ... an
+Output format:
+ Space-separated elements in enqueue order.
+
+Sample testcases
+
+Input:
+3
+1 2 3
+
+Output:
+1 2 3
+
+Input:
+2
+10 20
+
+Output:
+10 20
+
+Input:
+5
+1 2 3 4 5
+
+Output:
+1 2 3 4 5
+-----------------------------------------------------------------------------------------------
+4) Size of a Set after adding n elements
+Problem: Use a HashSet to add n elements and print the set size (duplicates ignored).
+Input format:
+ First token: n
+ Next n integers
+Output format:
+ Single integer: size of the set
+
+Sample testcases
+
+Input:
+4
+1 2 2 3
+
+Output:
+3
+
+Input:
+1
+1
+
+Output:
+1
+
+Input:
+5
+1 2 2 3 3
+
+Output:
+3
+--------------------------------------------------------------------------------------------------------
+5) Merge two Lists and sort the result
+Problem: Merge two lists (each input as a line of integers) and sort the combined list.
+Input format:
+ Line1: list1 elements (space-separated)
+ Line2: list2 elements (space-separated)
+Output format:
+ Space-separated sorted merged list.
+
+Sample testcases
+
+Input:
+1 3 5
+2 4 6
+
+Output:
+1 2 3 4 5 6
+
+Input:
+2 4
+1 3
+
+Output:
+1 2 3 4
+
+Input:
+10 30
+20 40
+
+Output:
+10 20 30 40
+--------------------------------------------------------------------------------------------------
+6) Reverse a List
+Problem: Read a list of integers and print them reversed.
+Input format:
+ Single line of space-separated integers.
+Output format:
+ Space-separated integers in reverse order.
+
+Sample testcases
+
+Input:
+1 2 3 4
+
+Output:
+4 3 2 1
+
+Input:
+1 2
+
+Output:
+2 1
+
+Input:
+1 2 3 4 5
+
+Output:
+5 4 3 2 1
+---------------------------------------------------------------------------------------------------
+7) Find the minimum element in a Queue
+Problem: Use a PriorityQueue (min-heap) to store elements and output the minimum.
+Input format:
+ Single line of space-separated integers.
+Output format:
+ Single integer: the minimum element.
+
+Sample testcases
+
+Input:
+3 4 1 2
+
+Output:
+1
+
+Input:
+10 20
+
+Output:
+10
+
+Input:
+5 2 8 1 9
+
+Output:
+1
+-----------------------------------------------------------------------------------------------------
+8) Remove even numbers from a List
+Problem: Remove all even numbers from a list and print the remaining elements preserving order.
+Input format:
+ Single line: space-separated integers.
+Output format:
+ Space-separated odd numbers only (original order).
+
+Sample testcases
+
+Input:
+1 2 3 4 5
+
+Output:
+1 3 5
+
+Input:
+1 2
+
+Output:
+1
+
+Input:
+2 4 6 8 1
+
+Output:
+1
+-------------------------------------------------------------------------------------------------------
+9) Sum of elements in a Queue
+Problem: Use a LinkedList as a Queue to hold elements and compute their sum.
+Input format:
+ Single line: space-separated integers.
+Output format:
+ Single integer: sum of all elements.
+
+Sample testcases
+
+Input:
+1 2 3 4
+
+Output:
+10
+
+Input:
+10 20
+
+Output:
+30
+
+Input:
+100 200 300
+
+Output:
+600
+----------------------------------------------------------------------------------------------------------
+10) Merge two Sets (return combined set as a sorted List)
+Problem: Merge two sets (input as two lines of integers) and output the combined unique elements sorted ascending as a list.
+Input format:
+ Line1: elements of set1 (space-separated)
+ Line2: elements of set2 (space-separated)
+Output format:
+ Space-separated sorted unique elements (merged result).
+
+Sample testcases
+
+Input:
+1 2 3
+3 4 5
+
+Output:
+1 2 3 4 5
+
+Input:
+1 2
+2 3
+
+Output:
+1 2 3
+
+Input:
+10 20
+20 30
+
+Output:
+10 20 30
+-------------------------------------------------------------------------------------------------------
+11) Intersection of two Lists
+Problem: Find common elements between two lists and print them sorted.
+Input format:
+ Line1: list1 elements (space-separated)
+ Line2: list2 elements (space-separated)
+Output format:
+ Space-separated common elements (sorted).
+
+Sample testcases
+
+Input:
+1 2 3 4
+2 4 6
+
+Output:
+2 4
+
+Input:
+1 2
+2
+
+Output:
+2
+
+Input:
+1 3 5 7
+3 5 7 9
+
+Output:
+3 5 7
+--------------------------------------------------------------------------------------------------------
+12) Check if a List is a subset of a Set
+Problem: Check whether all elements of a given list are contained in a given set.
+Input format:
+ Line1: list elements (space-separated)
+ Line2: set elements (space-separated)
+Output format:
+ true or false (Java boolean literal)
+
+Sample testcases
+
+Input:
+1 2
+1 2 3 4
+
+Output:
+true
+
+Input:
+1 3
+1 2
+
+Output:
+false
+
+Input:
+10 20
+10 30 40
+
+Output:
+false
+--------------------------------------------------------------------------------------------------------------
+13) Process Queue elements in reverse order (using a Stack)
+Problem: Use a LinkedList as a Queue to store elements and print them in reverse order using a Stack.
+Input format:
+ Single line: space-separated integers.
+Output format:
+ Space-separated integers in reverse order.
+
+Sample testcases
+
+Input:
+1 2 3
+
+Output:
+3 2 1
+
+Input:
+10 20
+
+Output:
+20 10
+
+Input:
+100 200 300
+
+Output:
+300 200 100
+----------------------------------------------------------------------------------------------------------
+14) Sort a Set and return as a List
+Problem: Use a TreeSet to store elements (which sorts and deduplicates) and return them as a sorted List.
+Input format:
+ Single line: space-separated integers.
+Output format:
+ Space-separated sorted unique elements.
+
+Sample testcases
+
+Input:
+3 1 4 2
+
+Output:
+1 2 3 4
+
+Input:
+2 1
+
+Output:
+1 2
+
+Input:
+5 3 1 4 2
+
+Output:
+1 2 3 4 5
+----------------------------------------------------------------------------------------------------------
