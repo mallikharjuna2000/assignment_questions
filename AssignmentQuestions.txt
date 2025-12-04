@@ -11890,3 +11890,513 @@ Output:
 Normal: Start Start Start Start Start
 Low: End End End End End
 ------------------------------------------------------------------------------------------------------------
+Day-41 Synchronization
+-------------------------
+ QUESTION 1
+Problem Statement
+Write a program to increment a shared counter using a synchronized method. Create two threads that call a synchronized method to increment a shared counter n times each.
+
+Input Format
+Single line: integer n
+Output Format
+Single integer — final counter value (should be 2 * n).
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+2
+
+Sample 2
+ Input:
+3
+
+Output:
+6
+
+Sample 3
+ Input:
+10
+
+Output:
+20
+
+------------------------------------------------------------------------------------------------------------
+QUESTION 2
+Problem Statement
+Write a program to decrement a shared counter using a synchronized block. Use a synchronized block to decrement a shared counter (initially 10) n times by two threads.
+
+Input Format
+Single line: integer n
+Output Format
+Single integer — final counter value after both threads finish.
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+8
+
+(Explanation: each thread decrements once → 10 − 2 = 8)
+Sample 2
+ Input:
+3
+
+Output:
+4
+
+(10 − 6 = 4)
+Sample 3
+ Input:
+7
+
+Output:
+-4
+
+(10 − 14 = -4)
+----------------------------------------------------------------------------------------------------------
+QUESTION 3
+Problem Statement
+Write a program to update a shared sum using a synchronized block. Use a synchronized block so two threads each add numbers from 1 to n to a shared sum.
+
+Input Format
+Single line: integer n
+Output Format
+Single integer — final sum (should be 2 * (1 + 2 + ... + n)).
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+2
+
+(Each thread adds 1 → total 2)
+Sample 2
+ Input:
+3
+
+Output:
+12
+
+(Sum 1..3 = 6; doubled → 12)
+Sample 3
+ Input:
+10
+
+Output:
+110
+
+(Sum 1..10 = 55; doubled → 110)
+--------------------------------------------------------------------------------------------------------
+QUESTION 4
+Problem Statement
+Write a program to simulate a ticket counter using a synchronized method. Create two threads that call a synchronized method to issue n tickets from a shared counter.
+
+Input Format
+Single line: integer n (number of tickets)
+Output Format
+Tickets printed sequentially separated by spaces, e.g.
+Ticket 1 Ticket 2 ... Ticket n
+
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+Ticket 1
+
+Sample 2
+ Input:
+2
+
+Output:
+Ticket 1 Ticket 2
+
+Sample 3
+ Input:
+5
+
+Output:
+Ticket 1 Ticket 2 Ticket 3 Ticket 4 Ticket 5
+------------------------------------------------------------------------------------------------------------
+ QUESTION 5
+Problem Statement
+Write a program to print numbers alternately using synchronized methods. Create two threads that call synchronized methods to print numbers from 1 to n alternately.
+
+Input Format
+Single line: integer n
+Output Format
+Single line with numbers 1 2 3 ... n printed in order (threads alternate producing them).
+
+Sample Testcases
+Sample 1
+ Input:
+2
+
+Output:
+1 2
+
+Sample 2
+ Input:
+4
+
+Output:
+1 2 3 4
+
+Sample 3
+ Input:
+6
+
+Output:
+1 2 3 4 5 6
+------------------------------------------------------------------------------------------------------
+QUESTION 6
+Problem Statement
+Write a program to update a shared string using a synchronized block. Two threads should each append a given character n times to a shared string using a synchronized block.
+
+Input Format
+Two lines:
+First line: integer n (times each thread appends)
+
+
+Second line: single character ch
+
+
+Output Format
+Single line: the final string (character repeated 2 * n times).
+
+Sample Testcases
+Sample 1
+ Input:
+1
+B
+
+Output:
+BB
+
+Sample 2
+ Input:
+2
+C
+
+Output:
+CCCC
+
+Sample 3
+ Input:
+5
+X
+
+Output:
+XXXXXXXXXX
+
+---------------------------------------------------------------------------------------------------------
+QUESTION 7
+Problem Statement
+Write a program to manage a shared resource count using synchronized methods. Create two threads: one increments and the other decrements a shared count n times. Initial count = 10.
+
+Input Format
+Single line: integer n (number of increments / decrements per thread)
+Output Format
+Single integer — final count.
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+10
+
+(10 +1 −1 =10)
+Sample 2
+ Input:
+3
+
+Output:
+10
+
+Sample 3
+ Input:
+7
+
+Output:
+10
+-----------------------------------------------------------------------------------------------------
+ QUESTION 8
+Problem Statement
+Write a program to maintain a shared inventory using synchronized methods. Create two threads: one adds n items, the other removes n items from a shared inventory. Initial inventory = 10.
+
+Input Format
+Single line: integer n (items to add / remove)
+Output Format
+Single integer — final inventory count.
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+10
+
+Sample 2
+ Input:
+3
+
+Output:
+10
+
+Sample 3
+ Input:
+7
+
+Output:
+10
+---------------------------------------------------------------------------------------------------------
+QUESTION 9
+Problem Statement
+Write a program to print even and odd numbers using synchronized methods. Create two threads that call synchronized methods to print odd and even numbers up to n. Output should print odds first followed by evens (both collected in the same output string).
+
+Input Format
+Single line: integer n
+Output Format
+Single line with odd numbers followed by even numbers, separated by spaces, e.g.
+1 3 5 2 4 6
+
+
+Sample Testcases
+Sample 1
+ Input:
+2
+
+Output:
+1 2
+
+Sample 2
+ Input:
+4
+
+Output:
+1 3 2 4
+
+Sample 3
+ Input:
+6
+
+Output:
+1 3 5 2 4 6
+--------------------------------------------------------------------------------------------------------
+ QUESTION 10
+Problem Statement
+Write a program to manage a shared counter with limits using a synchronized block. Two threads attempt to increment the shared counter n times each but the counter must not exceed a MAX (10). Stop further increments when MAX is reached. Print final counter value.
+
+Input Format
+Single line: integer n — number of attempts per thread
+Output Format
+Single integer — final counter value (≤ 10)
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+2
+
+Sample 2
+ Input:
+5
+
+Output:
+10
+
+Sample 3
+ Input:
+20
+
+Output:
+10
+
+-----------------------------------------------------------------------------------------------------
+QUESTION 11
+Problem Statement
+Write a program to simulate a shared printer using a synchronized method. Create two threads that call a synchronized method to print n jobs from a shared printer (jobs numbered 1..n). The printer should print jobs sequentially without duplication.
+
+Input Format
+Single line: integer n (number of jobs)
+Output Format
+A single line with job labels separated by spaces, e.g.
+Job 1 Job 2 ... Job n
+
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+Job 1
+
+Sample 2
+ Input:
+2
+
+Output:
+Job 1 Job 2
+
+Sample 3
+ Input:
+5
+
+Output:
+Job 1 Job 2 Job 3 Job 4 Job 5
+-----------------------------------------------------------------------------------------------------
+QUESTION 12
+Problem Statement
+Write a program to update a shared total using a synchronized block. Two threads each add a given value exactly n times to a shared total.
+
+Input Format
+Two integers on one line or two tokens:
+n — number of times each thread adds
+
+
+value — value to add each time
+
+
+Output Format
+Single integer — final total (should be 2 * n * value).
+
+Sample Testcases
+Sample 1
+ Input:
+1 5
+
+Output:
+10
+
+(2 threads × 1 × 5 = 10)
+Sample 2
+ Input:
+2 20
+
+Output:
+80
+
+(2 × 2 × 20 = 80)
+Sample 3
+ Input:
+10 10
+
+Output:
+200
+
+(2 × 10 × 10 = 200)
+------------------------------------------------------------------------------------------------------
+QUESTION 13
+Problem Statement
+Write a program to simulate a turn-based counter using a synchronized block. Two threads print numbers from 1 to n in strict turn-based order (thread1 prints the first number, thread2 the next, and so on), producing a single sequence 1 2 3 ... n.
+
+Input Format
+Single line: integer n
+Output Format
+Single line: numbers 1 2 3 ... n separated by spaces.
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+1
+
+Sample 2
+ Input:
+2
+
+Output:
+1 2
+
+Sample 3
+ Input:
+5
+
+Output:
+1 2 3 4 5
+-------------------------------------------------------------------------------------------------------
+ QUESTION 14
+Problem Statement
+Write a program to maintain a shared score using a synchronized method. Create two threads that each increment a shared score n times (initial score = 0). Print the final score.
+
+Input Format
+Single line: integer n (number of increments per thread)
+Output Format
+Single integer — final score (should be 2 * n).
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+2
+
+Sample 2
+ Input:
+3
+
+Output:
+6
+
+Sample 3
+ Input:
+10
+
+Output:
+20
+---------------------------------------------------------------------------------------------------------
+ QUESTION 15
+Problem Statement
+Write a program to append to a shared buffer using a synchronized block. Two threads should each append a given character n times to a shared buffer. Print final buffer contents.
+
+Input Format
+Two tokens:
+n — number of appends per thread
+
+
+ch — single character to append
+
+
+Output Format
+Single line — resulting buffer string (character repeated 2 * n times).
+
+Sample Testcases
+Sample 1
+ Input:
+1 X
+
+Output:
+XX
+
+Sample 2
+ Input:
+2 Y
+
+Output:
+YYYY
+
+Sample 3
+ Input:
+5 A
+
+Output:
+AAAAAAAAAA
+------------------------------------------------------------------------------------------------------
