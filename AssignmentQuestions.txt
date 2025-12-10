@@ -15143,3 +15143,2418 @@ Sample 3
  Output:
  20
 ========================================================================================================
+Map interface
+==============
+Question
+A school is organizing an event where each student is assigned a unique Enrollment ID along with their Name. You are required to store these details using a HashMap and display all the Enrollment IDs (keys).
+Requirements:
+Read an integer n — the number of students
+
+
+Read n key-value pairs:
+
+
+Key → Integer (Enrollment ID)
+
+
+Value → String (Student Name)
+
+
+Store them in a HashMap
+
+
+Print all the keys in any order (as HashMap does not maintain order)
+
+
+Input Format
+n
+<id1> <name1>
+<id2> <name2>
+...
+<idn> <namen>
+
+Output Format
+All keys separated by space (order may vary)
+
+
+ Sample Test Cases
+Test Case 1
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+
+Output
+1 2 3
+
+Test Case 2
+Input
+4
+101 Rahul
+102 Kavya
+103 Sneha
+104 Arjun
+
+Output
+101 102 103 104
+
+Test Case 3
+Input
+2
+10 John
+20 Mike
+
+Output
+10 20
+
+===========================================================================================================
+Question-2)
+A teacher wants to analyze the marks scored by students in a quick quiz. You are given a list of marks scored by students. Your task is to count how many students scored each mark using a HashMap, and display the result as key-value pairs.
+Requirements:
+Read a list of integer elements (marks)
+
+
+Count the occurrence of each element using a HashMap
+
+
+Print the result in the format:
+ key:value pairs separated by commas
+ (Order may vary due to HashMap)
+
+
+Input Format
+n
+<element1> <element2> ... <elementn>
+(All integers in one line)
+
+Output Format
+key:value, key:value, ...
+
+Sample Test Cases
+Test Case 1
+Input
+5
+1 2 2 3 1
+
+Output
+1:2, 2:2, 3:1
+
+Test Case 2
+Input
+6
+4 4 4 5 6 5
+
+Output
+4:3, 5:2, 6:1
+
+Test Case 3
+Input
+7
+10 20 10 30 20 10 30
+
+Output
+10:3, 20:2, 30:2
+-------------------------------------------------------------------------------------------------------
+Question-3) — Check if a Key Exists in HashMap
+A company maintains employee codes mapped with their initials. You are given a list of employee code–name pairs. After storing these details in a HashMap, check whether a particular employee code exists in the HashMap or not.
+Requirements:
+Read an integer n → number of pairs
+
+
+Read n key-value pairs:
+Key → Integer (Employee Code)
+Value → String (Employee Initial)
+Read a key to be searched
+
+
+Output:
+true → if key is found
+false → otherwise
+
+
+Input Format
+n
+<key1> <value1>
+<key2> <value2>
+...
+<keyn> <valuen>
+searchKey
+
+Output Format
+true / false
+
+
+ Sample Test Cases
+Test Case 1
+Input
+3
+1 A
+2 B
+3 C
+2
+
+Output
+true
+
+Test Case 2
+Input
+4
+100 X
+101 Y
+102 Z
+103 W
+105
+
+Output
+false
+
+Test Case 3
+Input
+2
+10 P
+20 Q
+10
+
+Output
+true
+-------------------------------------------------------------------------------------------------------
+Question-4) — Remove a Key from a HashMap
+A mobile shop stores customer booking details where each booking has a unique Booking ID and a Customer Name. You are given these booking details in a HashMap. Your task is to remove a specific Booking ID and then display the remaining key-value pairs.
+Requirements:
+Read integer n → number of entries
+Read n key-value pairs:
+Key → Integer (Booking ID)
+Value → String (Customer Name)
+
+
+Read a key to be removed
+Remove that entry from the HashMap (if exists)
+Print remaining key-value pairs in the format:
+ [(key, "value"), (key, "value"), ...]
+ (Order may vary due to HashMap)
+
+
+Input Format
+n
+<key1> <value1>
+<key2> <value2>
+...
+<keyn> <valuen>
+removeKey
+
+Output Format
+[(key, "value"), (key, "value"), ...]
+
+Sample Test Cases
+Test Case 1
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+2
+
+Output
+[(1, "Alice"), (3, "Charlie")]
+
+Test Case 2
+Input
+4
+11 Ajay
+22 Riya
+33 Kiran
+44 Manoj
+33
+
+Output
+[(11, "Ajay"), (22, "Riya"), (44, "Manoj")]
+
+Test Case 3
+Input
+2
+100 John
+200 Mary
+500
+
+Output
+[(100, "John"), (200, "Mary")]
+
+-------------------------------------------------------------------------------------------------------------
+Question-5) — Find the Value Associated with a Key
+A library system stores Book IDs and Book Titles using a HashMap. You are given a list of Book ID–Title pairs. Your task is to search for a specific Book ID and print the corresponding Book Title.
+If the given key does not exist in the HashMap, print:
+Key not found
+
+Input Format
+n
+<key1> <value1>
+<key2> <value2>
+...
+<keyn> <valuen>
+searchKey
+
+Output Format
+Value associated with the key
+OR
+Key not found
+
+Sample Test Cases
+Test Case 1
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+2
+
+Output
+Bob
+
+Test Case 2
+Input
+4
+10 Math
+20 Science
+30 English
+40 Physics
+30
+
+Output
+English
+
+Test Case 3
+Input
+2
+99 Harry
+88 Ron
+77
+
+Output
+Key not found
+-------------------------------------------------------------------------------------------------------
+Question-6)Count Occurrences of Characters in a String
+A university wants to analyze how frequently each alphabet appears in a given word during a handwriting recognition project.
+ You are given a string, and your task is to count the frequency of every character using a HashMap and print results as key-value pairs.
+Ignore case sensitivity — treat characters as they appear.
+Input Format
+A single string (without spaces)
+
+Output Format
+Each character and its frequency printed as:
+char:count, char:count, ...
+(Order may vary due to HashMap)
+
+
+ Sample Test Cases
+Test Case 1
+Input
+hello
+
+Output
+h:1, e:1, l:2, o:1
+
+Test Case 2
+Input
+banana
+
+Output
+b:1, a:3, n:2
+
+Test Case 3
+Input
+aaa
+
+Output
+a:3
+---------------------------------------------------------------------------------------------------------
+Question-7 — Merge Two HashMaps
+An online course platform maintains student enrollment data in two different batches.
+ Each student has a unique ID as the key and a name as the value. You are provided with two HashMaps.
+ Your task is to merge the two HashMaps, and if a key already exists, the value from the second map should overwrite the one in the first map.
+[(key, "value"), (key, "value"), ...]
+
+Input Format
+n
+<key1> <value1>
+...
+<keyn> <valuen>
+
+m
+<key1> <value1>
+...
+<keym> <valuem>
+
+Output Format
+[(key, "value"), (key, "value"), ...]
+
+Sample Test Cases
+Test Case 1
+Input
+2
+1 A
+2 B
+
+2
+2 C
+3 D
+
+Output
+[(1, "A"), (2, "C"), (3, "D")]
+
+Test Case 2
+Input
+3
+10 Raj
+20 Ravi
+30 Riya
+
+2
+20 Sam
+40 Jaya
+
+Output
+[(10, "Raj"), (20, "Sam"), (30, "Riya"), (40, "Jaya")]
+
+Test Case 3
+Input
+1
+5 X
+
+1
+5 Y
+
+Output
+[(5, "Y")]
+------------------------------------------------------------------------------------------------------------
+Question-8) — First Non-Repeating Character
+A messaging app wants to identify unique characters in chat messages for text analysis.
+ You are given a string, and your task is to find the first character that appears only once in the string.
+ If no such character exists, print:
+-1
+
+Input Format
+A single string (can contain repeating characters)
+
+Output Format
+The first non-repeating character OR -1
+
+Sample Test Cases
+Test Case 1
+Input
+swiss
+
+Output
+w
+
+Test Case 2
+Input
+aabbcc
+
+Output
+-1
+
+Test Case 3
+Input
+programming
+
+Output
+p
+
+-------------------------------------------------------------------------------------------------------
+Question-9) — Synchronized HashMap with Multiple Threads
+A company wants to maintain a shared counter that keeps track of total tasks processed by multiple workers (threads).
+ To prevent data corruption due to concurrent updates, the counter must be stored in a HashMap and must be accessed in a thread-safe manner.
+You are required to:
+Use Collections.synchronizedMap(new HashMap<>())
+Two threads must increment the same counter
+Each thread should increment the counter n times
+Print the final value after both threads finish executing
+ (i.e., total increments = 2 * n)
+
+
+Input Format
+n
+
+
+Output Format
+Final counter value
+
+Constraints
+1 ≤ n ≤ 100
+
+Sample Test Cases
+Test Case 1
+Input
+5
+
+Output
+10
+
+Test Case 2
+Input
+1
+
+Output
+2
+
+Test Case 3
+Input
+10
+Output
+20
+----------------------------------------------------------------------------------------------------
+ Question — Find the Most Frequent Element in an Array
+You are given an array of integers. Your task is to find the element which appears the most number of times using a HashMap.
+ If two or more elements have the same highest frequency, return the smallest element among them.
+Input Format
+size
+<element1> <element2> ... <elementn>
+
+Output Format
+Most frequent element
+
+Constraints
+1 ≤ size ≤ 100
+1 ≤ elements ≤ 1000
+
+Sample Test Cases
+Test Case 1
+Input
+5
+1 2 2 3 1
+Output
+1
+Explanation
+ Frequencies → 1 → 2, 2 → 2, 3 → 1
+ Tie between 1 and 2 → choose smallest → 1
+
+ Test Case 2
+Input
+7
+4 4 5 6 5 5 4
+Output
+5
+Explanation
+ 4 → 3 times
+ 5 → 3 times
+ 6 → 1 time
+ Tie between 4 & 5 → smallest is 4 ❌ but 5 appears more → 5
+(Corrected logic: pick highest first, not smallest first)
+
+Test Case 3
+Input
+4
+8 8 9 9
+Output
+8
+Explanation
+ Both 8 and 9 appear 2 times → smallest = 8
+--------------------------------------------------------------------------------------------------
+Question — Find Employee with Highest Salary Using HashMap
+You are required to store a list of Employees in a HashMap where:
+Key → Employee ID (Integer)
+Value → Employee Object (containing id, name, salary)
+
+
+Your task is to:
+Read n employee details
+Store them in a HashMap
+Find the employee who has the highest salary
+Print only the employee’s name
+
+
+Input Format
+n
+<id1> <name1> <salary1>
+<id2> <name2> <salary2>
+...
+<idn> <namen> <salaryn>
+
+Output Format
+Name of employee with highest salary
+
+Constraints
+1 ≤ n ≤ 100
+1 ≤ id ≤ 1000
+1 ≤ salary ≤ 100000
+Length of name ≤ 50
+
+Sample Test Cases
+Test Case 1
+Input
+3
+1 Alice 50000
+2 Bob 60000
+3 Charlie 45000
+
+Output
+Bob
+Explanation
+ Bob has the highest salary → 60000
+
+Test Case 2
+Input
+2
+10 David 55000
+20 Emma 55000
+Output
+David
+Explanation
+ Both salaries equal → choose the one appearing first in input
+
+Test Case 3
+Input
+4
+5 John 70000
+6 Neha 80000
+7 Ravi 65000
+8 Meera 80000
+
+Output
+Neha
+Explanation
+ Two employees have highest salary 80000 → choose the first encountered
+------------------------------------------------------------------------------------------------------
+Question — Convert HashMap to Sorted List of Keys
+You are given a HashMap containing integer keys and string values.
+ Your task is to extract all the keys from the map and print them in sorted order as a list.
+Input Format
+n
+<key1> <value1>
+<key2> <value2>
+...
+<keyn> <valuen>
+
+Output Format
+[sorted_key1, sorted_key2, ..., sorted_keyn]
+
+Constraints
+1 ≤ n ≤ 100
+1 ≤ key ≤ 1000
+Length of value ≤ 50
+
+Sample Test Cases
+Test Case 1
+Input
+3
+3 C
+1 A
+2 B
+
+Output
+[1, 2, 3]
+
+Test Case 2
+Input
+4
+10 X
+5 Y
+8 Z
+1 W
+
+Output
+[1, 5, 8, 10]
+
+Test Case 3
+Input
+1
+100 Hello
+
+Output
+[100]
+
+-------------------------------------------------------------------------------------
+Question-13)
+Question — Sum of Values in a HashMap
+
+You are given a HashMap where the keys and values are integers.
+Your task is to compute the sum of all the values stored in the HashMap and print the total.
+
+ Input Format
+n
+<key1> <value1>
+<key2> <value2>
+...
+<keyn> <valuen>
+
+ Output Format
+Sum of all values
+
+ Constraints
+1 ≤ n ≤ 100
+1 ≤ key ≤ 1000
+1 ≤ value ≤ 1000
+
+ Sample Test Cases
+ Test Case 1
+
+Input
+3
+1 10
+2 20
+3 30
+
+Output
+60
+
+Explanation
+Sum = 10 + 20 + 30 = 60
+
+ Test Case 2
+Input
+4
+5 5
+10 10
+15 15
+20 20
+
+Output
+50
+
+ Test Case 3
+Input
+2
+100 300
+200 400
+
+Output
+700
+-----------------------------------------------------------------------------------------
+Question — Find All Keys for a Given Value in a HashMap
+You are given a HashMap where keys are integers and values are strings.
+ Your task is to find all the keys that are associated with a given value and print them as a list.
+If no key matches the value, print:
+[]
+
+Input Format
+n
+<key1> <value1>
+<key2> <value2>
+...
+<keyn> <valuen>
+searchValue
+
+Output Format
+[keyA, keyB, ...]
+
+Constraints
+1 ≤ n ≤ 100
+1 ≤ key ≤ 1000
+Length of value ≤ 50
+
+
+ Sample Test Cases
+Test Case 1
+Input
+3
+1 Alice
+2 Bob
+3 Alice
+Alice
+
+Output
+[1, 3]
+
+Test Case 2
+Input
+4
+11 Red
+22 Blue
+33 Red
+44 Green
+Blue
+
+Output
+[22]
+
+Test Case 3
+Input
+3
+5 Sun
+6 Moon
+7 Star
+Earth
+
+Output
+[]
+---------------------------------------------------------------------------------------------------------
+Question — Check if Two HashMaps Are Equal
+You are given two HashMaps with integer keys and string values.
+ Write a program to check whether both maps are equal or not.
+ Two HashMaps are considered equal if:
+They contain the same number of key-value pairs
+
+
+Every key and its associated value is present in both maps
+
+
+Print:
+true
+
+if they are equal, otherwise print:
+false
+
+Input Format
+size1
+<key> <value>  // size1 pairs
+
+size2
+<key> <value>  // size2 pairs
+
+Output Format
+true / false
+
+Constraints
+1 ≤ size ≤ 100
+1 ≤ key ≤ 1000
+Length of value ≤ 50
+
+Sample Test Cases
+Test Case 1
+Input
+2
+1 A
+2 B
+2
+2 B
+1 A
+
+Output
+true
+
+Test Case 2
+Input
+3
+10 X
+20 Y
+30 Z
+3
+10 X
+20 Y
+40 Z
+
+Output
+false
+
+Test Case 3
+Input
+2
+100 Red
+200 Blue
+1
+100 Red
+
+Output
+false
+----------------------------------------------------------------------------------------------------
+LinkedHashMap
+--------------
+Question 1 — Print Keys in Insertion Order Using LinkedHashMap
+You are required to store multiple key-value pairs in a LinkedHashMap, where keys are integers and values are strings.
+ After storing the pairs, print all the keys in the same order they were inserted.
+Input Format
+n
+<key1> <value1>
+<key2> <value2>
+...
+<keyn> <valuen>
+
+Output Format
+All keys in insertion order separated by space
+
+Constraints
+1 ≤ n ≤ 100
+1 ≤ key ≤ 1000
+Length of value ≤ 50
+
+Sample Test Cases
+Test Case 1
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+
+Output
+1 2 3
+
+Test Case 2
+Input
+4
+10 John
+20 Emma
+30 Ryan
+40 Kate
+
+Output
+10 20 30 40
+
+Test Case 3
+Input
+2
+7 Blue
+5 Green
+
+Output
+7 5
+
+---------------------------------------------------------------------------------------------------
+Question 2 — Count Element Frequency Using LinkedHashMap
+You are given an array of integers. Your task is to count how many times each number appears using a LinkedHashMap so that the order of first appearance is preserved.
+Print the result as key:value pairs separated by commas.
+Input Format
+size
+<element1> <element2> ... <elementN>
+
+Output Format
+key:value, key:value, ...
+
+Constraints
+1 ≤ size ≤ 100
+1 ≤ elements ≤ 1000
+
+Sample Test Cases
+Test Case 1
+Input
+5
+1 2 2 3 1
+Output
+1:2, 2:2, 3:1
+
+Explanation
+1 → appears 2 times
+2 → appears 2 times
+3 → appears 1 time
+Maintains order of first occurrence → 1, 2, then 3 ✔
+
+
+Test Case 2
+Input
+6
+4 5 4 6 5 5
+
+Output
+4:2, 5:3, 6:1
+
+Test Case 3
+Input
+3
+9 9 9
+
+Output
+9:3
+
+-----------------------------------------------------------------------------------------------------
+Question 3 — Print Values in Insertion Order Using LinkedHashMap
+You are required to store multiple key-value pairs in a LinkedHashMap, where keys are integers and values are strings.
+ After inserting all pairs, print only the values in the same order in which they were inserted.
+Input Format
+n
+<key1> <value1>
+<key2> <value2>
+...
+<keyn> <valuen>
+
+Output Format
+All values in insertion order separated by space
+
+Constraints
+1 ≤ n ≤ 100
+1 ≤ key ≤ 1000
+Length of value ≤ 50
+
+Sample Test Cases
+Test Case 1
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+
+Output
+Alice Bob Charlie
+
+Test Case 2
+Input
+2
+10 Mango
+20 Apple
+
+Output
+Mango Apple
+
+Test Case 3
+Input
+4
+7 Cat
+2 Dog
+9 Bird
+3 Fish
+
+Output
+Cat Dog Bird Fish
+---------------------------------------------------------------------------------------------------
+Question 4 — Implement LRU Cache Using LinkedHashMap
+You are required to implement a simple LRU (Least Recently Used) cache using a LinkedHashMap.
+The cache should store key-value pairs (key: integer, value: string).
+
+
+The cache has a fixed capacity.
+
+
+When the number of entries exceeds the capacity, the least recently used entry must be removed.
+
+
+Use access order of LinkedHashMap to maintain LRU behavior.
+
+
+Input Format
+n
+<key1> <value1>
+<key2> <value2>
+...
+<keyn> <valuen>
+capacity
+
+n → number of put operations
+
+
+Then n lines of key value
+
+
+Then an integer capacity for the cache size
+
+
+Output Format
+[(key, "value"), (key, "value"), ...]
+
+Final content of the cache in access order (from least recently used to most recently used).
+Constraints
+1 ≤ n ≤ 100
+1 ≤ capacity ≤ n
+1 ≤ key ≤ 1000
+Length of value ≤ 50
+
+Sample Test Case
+ Sample Test Case 1
+Input
+3
+1 A
+2 B
+3 C
+2
+
+Output
+[(2, "B"), (3, "C")]
+
+Explanation
+Insert (1, "A"), (2, "B"), (3, "C")
+Capacity = 2 → when inserting 3rd entry, oldest (1, "A") is evicted
+Final cache: (2, "B"), (3, "C")
+-------------------------------------------------------------------------------------------------
+Question 5 — Check if a Key Exists in LinkedHashMap (Scenario Based)
+Scenario:
+ A university stores student roll numbers along with their section names in a LinkedHashMap, ensuring details remain in the same order of registration.
+ After storing all student records, the system needs to verify whether a particular roll number is present in the database.
+Your task is to read student data, store it in a LinkedHashMap, and check whether a given roll number exists in the system.
+If the roll number is found → print true
+ Otherwise → print false
+Input Format
+n
+<rollNo1> <section1>
+<rollNo2> <section2>
+...
+<rollNoN> <sectionN>
+searchKey
+
+Output Format
+true / false
+
+Constraints
+1 ≤ n ≤ 100
+1 ≤ rollNo ≤ 1000
+Length of section ≤ 50
+
+Sample Test Cases
+Test Case 1
+Input
+3
+1 A
+2 B
+3 C
+2
+
+Output
+true
+Explanation
+ Roll number 2 exists in the student records.
+
+Test Case 2
+Input
+4
+10 C1
+12 B1
+15 A1
+18 C2
+20
+
+Output
+false
+
+Test Case 3
+Input
+2
+101 IT
+102 CS
+101
+
+Output
+true
+------------------------------------------------------------------------------------------------------
+Question 6 — Find First Inserted Entry in LinkedHashMap
+(Scenario-Based Question)
+Scenario:
+ A shopping website records items as customers add them to their cart.
+ For each item:
+Key = Item ID (Integer)
+Value = Item Name (String)
+
+
+Since the cart uses a LinkedHashMap, the items remain in the same order in which they were added.
+Your task is to:
+Read and store n item details in a LinkedHashMap
+
+
+
+Sample Test Case 1
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+
+Output
+1:Alice
+
+
+Sample Test Case 2
+Input
+4
+101 Mobile
+102 Charger
+103 Case
+104 Earphones
+
+Output
+101:Mobile
+
+
+Sample Test Case 3
+Input
+2
+55 Mango
+99 Apple
+
+Output
+55:Mango
+----------------------------------------------------------------------------------------------------
+Question 7 — Count Character Occurrences Using LinkedHashMap
+Scenario:
+ A messaging application is analyzing user text input to personalize recommendations.
+ To understand typing behavior, the system needs to track how many times each character appears in a message.
+ Since the first appearance order is important, a LinkedHashMap must be used so the output reflects the original order of characters.
+Your task:
+Read a string
+Count how many times each character appears using LinkedHashMap
+Print character frequency as key:value pairs, separated by commas
+Maintain the insertion order (first occurrence order)
+
+
+
+ Sample Test Cases
+Test Case 1
+Input
+hello
+
+Output
+h:1, e:1, l:2, o:1
+
+Test Case 2
+Input
+banana
+
+Output
+b:1, a:3, n:2
+
+Test Case 3
+Input
+aaa
+
+Output
+a:3
+--------------------------------------------------------------------------------------------------------
+Question 8 — Merge Two LinkedHashMaps and Print in Insertion Order
+Scenario:
+ A company stores employee details in separate LinkedHashMaps based on departments.
+ Now, the HR team wants to generate a combined list of employees while preserving the insertion order of each department’s entries.
+Your task is to:
+Read two LinkedHashMaps (employee data)
+
+
+Merge them so that:
+
+
+The entries of the first map appear first
+Followed by entries from the second map
+
+
+Sample Test Cases
+Test Case 1
+Input
+2
+1 A
+2 B
+2
+3 C
+4 D
+
+Output
+[(1, "A"), (2, "B"), (3, "C"), (4, "D")]
+
+Test Case 2
+Input
+3
+10 X
+11 Y
+12 Z
+1
+13 W
+
+Output
+[(10, "X"), (11, "Y"), (12, "Z"), (13, "W")]
+
+
+Test Case 3
+Input
+1
+5 Hello
+2
+6 Hi
+7 Hey
+
+Output
+[(5, "Hello"), (6, "Hi"), (7, "Hey")]
+-----------------------------------------------------------------------------------------------------
+Question 9 — Find the Last Inserted Entry in LinkedHashMap
+Scenario:
+ An online movie ticket booking system maintains a record of bookings in the order they are made.
+ Each booking has:
+Key → Booking ID (Integer)
+
+
+Value → Customer Name (String)
+
+
+Since a LinkedHashMap preserves insertion order, the most recent booking will always be at the end.
+Your task:
+Read n booking entries and store them in a LinkedHashMap
+
+
+Print the last inserted key-value pair, representing the most recent booking
+
+
+Sample Test Cases
+Test Case 1
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+
+Output
+3:Charlie
+
+
+Test Case 2
+Input
+2
+10 Riya
+11 Karan
+
+Output
+11:Riya
+
+
+Test Case 3
+Input
+4
+101 India
+55 USA
+77 Japan
+88 China
+
+Output
+88:China
+
+--------------------------------------------------------------------------------------------------------
+Question 10 — Synchronized LinkedHashMap with Multiple Threads
+Scenario:
+ A banking application maintains a shared transaction counter that keeps track of total operations done by customer service agents (threads).
+ To avoid incorrect counting due to simultaneous updates by multiple threads, the counter is stored in a LinkedHashMap wrapped using:
+Collections.synchronizedMap()
+
+Your task is to:
+Read a value n
+Create a synchronized LinkedHashMap to store:
+
+
+Key → "counter"
+Value → shared transaction count
+
+
+Create two threads, each incrementing the counter n times
+Print the final value of the counter
+ (Expected total increments = 2 × n)
+
+
+Input Format
+n     // number of increments per thread
+
+Output Format
+Final counter value
+
+Constraints
+1 ≤ n ≤ 100
+
+ Sample Test Cases
+Test Case 1
+Input
+5
+
+Output
+10
+
+
+Test Case 2
+Input
+1
+
+Output
+2
+
+
+Test Case 3
+Input
+10
+
+Output
+20
+----------------------------------------------------------------------------------------------------------
+Question 11 — Reverse Insertion Order in LinkedHashMap
+Scenario:
+ An online shopping portal logs customer orders in the exact order they are placed using a LinkedHashMap.
+ For report purposes, the admin wants to display these orders in reverse order, showing the most recent order first.
+Your task:
+Store n order entries in a LinkedHashMap
+
+
+Sample Test Cases
+Test Case 1
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+
+Output
+[(3, "Charlie"), (2, "Bob"), (1, "Alice")]
+
+
+Test Case 2
+Input
+4
+10 Pen
+20 Pencil
+30 Book
+40 Bag
+
+Output
+[(40, "Bag"), (30, "Book"), (20, "Pencil"), (10, "Pen")]
+
+
+Test Case 3
+Input
+1
+99 Mobile
+
+Output
+[(99, "Mobile")]
+---------------------------------------------------------------------------------------------------------------
+Question 12 — Find All Keys for a Given Value Using LinkedHashMap
+(Scenario-Based Question)
+Scenario:
+ A library system stores book records where:
+Key → Book ID (Integer)
+
+
+Value → Book Author (String)
+
+
+Multiple books may be written by the same author.
+ Since the library uses a LinkedHashMap, the order in which books are added must be preserved.
+Your task:
+Read book entries and store them in a LinkedHashMap
+
+
+Read an author name
+
+
+Print all Book IDs written by that author in insertion order
+
+
+
+ Sample Test Cases
+Test Case 1
+Input
+3
+1 Alice
+2 Bob
+3 Alice
+Alice
+
+Output
+[1, 3]
+
+
+Test Case 2
+Input
+4
+10 King
+20 Smith
+30 King
+40 John
+King
+
+Output
+[10, 30]
+
+
+Test Case 3
+Input
+3
+1 Red
+2 Blue
+3 Green
+Yellow
+
+Output
+[]
+------------------------------------------------------------------------------------------------------
+Question 13 — Check if a LinkedHashMap Contains a Specific Value
+Scenario:
+ A university portal stores student admission details, where:
+Key → Roll Number (Integer)
+
+
+Value → Student Name (String)
+
+
+To verify whether a particular student has enrolled, the system must check if a given student name is present in the LinkedHashMap.
+Your task:
+Read student records and store them in a LinkedHashMap
+
+
+Read a student name to search
+
+
+Print true if the student exists, otherwise print false
+Sample Test Cases
+Test Case 1
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+Bob
+
+Output
+true
+
+
+Test Case 2
+Input
+4
+10 Red
+20 Blue
+30 Green
+40 Yellow
+Black
+
+Output
+false
+
+
+Test Case 3
+Input
+2
+7 Cat
+9 Dog
+Dog
+
+Output
+true
+----------------------------------------------------------------------------------------------------
+Question 14 — Implement a Frequency-Based Cache Using LinkedHashMap
+Scenario:
+ An online video streaming platform maintains a small in-memory cache of recently accessed videos.
+ Each cached entry stores:
+Key → Video ID (integer)
+
+
+Value → Video Title (string)
+
+
+Because memory is limited, the cache has a fixed capacity.
+ When a new video is added and the cache is full, the system must remove the least frequently used (LFU) video.
+If more than one video has the same minimum frequency, the one that was inserted earliest (oldest) should be removed.
+ Insertion order must be preserved for the remaining entries, so a LinkedHashMap is used.
+Your task is to:
+Read n key-value pairs and a cache capacity
+Simulate inserting these entries into a frequency-based cache:
+
+
+Each insertion of a new key adds it to the cache
+When size exceeds capacity → remove the least frequently used key
+If frequencies tie → remove the oldest inserted among them
+
+
+Print the final contents of the cache as:
+
+ [(key, "value"), (key, "value"), ...]
+ in insertion order of the remaining keys.
+
+
+Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+3
+1 A
+2 B
+3 A
+2
+
+Output
+[(2, "B"), (3, "A")]
+
+Explanation (Intuitive LFU idea):
+ Capacity = 2
+ After processing all inserts, one key must be removed.
+ The cache keeps the most relevant entries and ends up with (2, "B") and (3, "A") in insertion order of the remaining keys.
+Sample Test Case 2
+Input
+4
+10 X
+20 Y
+30 Z
+40 W
+3
+
+Output
+[(20, "Y"), (30, "Z"), (40, "W")]
+
+Explanation:
+ Capacity = 3
+ When the 4th entry is added, one entry must be removed.
+ All keys have the same frequency → remove the oldest (10, "X").
+ Remaining entries: 20, 30, 40 in insertion order.
+Sample Test Case 3
+Input
+2
+5 Hello
+6 World
+2
+
+Output
+[(5, "Hello"), (6, "World")]
+
+Explanation:
+ Capacity = 2, only 2 entries → no removal needed.
+
+---------------------------------------------------------------------------------------------------------
+Question 15 — Convert LinkedHashMap to a List of Key-Value Pairs
+(Scenario-Based Question)
+Scenario:
+ A hospital maintains patient records in the order they arrive using a LinkedHashMap, where:
+Key → Patient ID (Integer)
+
+
+Value → Patient Name (String)
+
+
+For reporting purposes, the hospital needs to export this data into a list format, while preserving the insertion order of entries.
+Your task:
+Store all patient records in a LinkedHashMap
+
+
+Convert the entries into a list of key-value pairs
+
+
+Sample Test Cases
+Test Case 1
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+
+Output
+[(1, "Alice"), (2, "Bob"), (3, "Charlie")]
+
+Test Case 2
+Input
+2
+10 Milk
+20 Bread
+
+Output
+[(10, "Milk"), (20, "Bread")]
+
+
+Test Case 3
+Input
+1
+100 John
+
+Output
+[(100, "John")]
+-----------------------------------------------------------------------------------------------------
+HashTable
+------------
+Question 1 — Print All Keys from a Hashtable
+(Scenario-Based Question)
+Scenario:
+ A government office stores citizen records using a Hashtable, where:
+Key → Citizen ID (Integer)
+
+
+Value → Name (String)
+
+
+Since Hashtable does not maintain order, keys can appear in any order when printed.
+Your task:
+Read and store n citizen records in a Hashtable
+
+
+Print all keys (Citizen IDs) in any order, separated by spaces
+
+
+
+Sample Test Cases
+Test Case 1
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+
+Output
+1 2 3
+
+
+Test Case 2
+Input
+2
+10 A
+20 B
+
+Output
+10 20
+
+
+Test Case 3
+Input
+4
+5 Cat
+8 Dog
+3 Lion
+6 Tiger
+
+Output
+5 8 3 6
+--------------------------------------------------------------------------------------------------------
+Question 2 — Count Frequency of Elements Using Hashtable
+Scenario:
+ A polling system records votes cast for multiple candidates.
+ Each number in the input represents a candidate ID.
+ To count the votes securely without allowing null keys or duplicate issues, a Hashtable is used.
+Your task:
+Read an array of integers (candidate IDs)
+
+
+Count how many votes each candidate received
+
+
+
+Sample Test Cases
+Test Case 1 (Given)
+Input
+5
+1 2 2 3 1
+
+Output
+1:2 2:2 3:1
+
+
+Test Case 2
+Input
+6
+4 4 5 6 5 5
+
+Output
+4:2 5:3 6:1
+
+
+Test Case 3
+Input
+3
+9 9 9
+
+Output
+9:3
+
+----------------------------------------------------------------------------------------------------------
+Question 3 — Check if a Key Exists in Hashtable
+Scenario:
+ A banking system stores customer account details using a Hashtable for secure access.
+Key: Account Number (Integer)
+
+
+Value: Customer Name
+
+
+The system must quickly verify whether a given account number exists in the database.
+Your task:
+Store account details in a Hashtable
+
+
+Take a key as input
+
+
+Print:
+
+
+true → if the key exists
+false → otherwise
+
+
+Sample Test Cases
+Test Case 1 (Given)
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+2
+
+Output
+true
+
+Test Case 2
+Input
+4
+10 Sam
+20 John
+30 Mike
+40 Raj
+25
+
+Output
+false
+
+Test Case 3
+Input
+2
+5 Cat
+9 Dog
+9
+Output
+true
+-----------------------------------------------------------------------------------------------------
+Question 4 — Remove a Key from a Hashtable
+(Scenario-Based Question)
+Scenario:
+ A hospital uses a Hashtable to manage patient records securely.
+ Each record stores:
+Key → Patient ID (Integer)
+
+
+Value → Patient Name (String)
+
+
+If a patient is discharged, the system must remove their record.
+Your task:
+Read n patient entries
+
+
+Remove the patient entry with the given Patient ID (if it exists)
+
+
+Print the remaining entries as:
+
+ key value key value ...
+ (Order may vary due to hashing)
+
+
+
+Sample Test Cases
+Test Case 1 (Given)
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+2
+
+Output
+1 Alice 3 Charlie
+
+
+Test Case 2
+Input
+4
+5 Red
+7 Blue
+9 Green
+11 Yellow
+7
+
+Output
+5 Red 9 Green 11 Yellow
+
+
+Test Case 3
+Input
+2
+100 Tom
+200 Jerry
+500
+
+Output
+100 Tom 200 Jerry
+
+--------------------------------------------------------------------------------------------------
+Question 5 — Find the Value Associated with a Key in Hashtable
+Scenario:
+ A telecom company stores customer information in a Hashtable for secure and synchronized data access.
+ Each entry contains:
+Key → Customer ID (Integer)
+
+
+Value → Customer Name (String)
+
+
+Given a Customer ID, the system must retrieve and display the corresponding name.
+Your task:
+Store n customer records in a Hashtable
+
+
+Read a key
+
+
+Print the associated value if found
+
+
+If the key does not exist, print:
+
+ Key not found
+
+Sample Test Cases
+Test Case 1 (Given)
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+2
+
+Output
+Bob
+
+Test Case 2
+Input
+2
+10 Sam
+20 Ron
+30
+
+Output
+Key not found
+
+Test Case 3
+Input
+4
+5 Red
+6 Blue
+7 Green
+8 Black
+7
+
+Output
+Green
+-----------------------------------------------------------------------------------------------------------
+Question 6 — Count Character Occurrences Using Hashtable
+
+Scenario:
+ A messaging application analyzes user-typed text to improve autocorrect features.
+ To understand typing behavior, it counts how many times each character appears in a given message.
+ Since security and concurrency safety are important, a Hashtable is used.
+Your task:
+Read a string input (without spaces)
+
+
+Count the frequency of each character using Hashtable
+
+
+Print the result in the format:
+
+ char:count char:count ...
+ (Order may vary due to hashing)
+
+
+
+ Sample Test Cases
+Test Case 1 (Given)
+Input
+hello
+
+Output
+h:1 e:1 l:2 o:1
+
+
+Test Case 2
+Input
+banana
+
+Output
+b:1 a:3 n:2
+
+
+Test Case 3
+Input
+aaa
+
+Output
+a:3
+------------------------------------------------------------------------------------------------------
+Question 7 — Merge Two Hashtables
+(Scenario-Based Question)
+Scenario:
+ A retail company stores inventory details in two different systems due to a recent merger.
+ Each system maintains:
+Key → Product ID (Integer)
+
+
+Value → Product Name (String)
+
+
+For data consolidation:
+Merge both Hashtables into one
+
+
+If a Product ID exists in both, the second system’s value should overwrite the first
+
+
+Your task:
+Read two Hashtables
+
+
+Merge them with overwrite rules
+
+
+Print the final merged key-value pairs in any order
+
+
+Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+2
+1 A
+2 B
+2
+2 C
+3 D
+
+Output
+1 A 2 C 3 D
+
+(Order may vary due to hashing)
+
+Test Case 2
+Input
+3
+10 X
+20 Y
+30 Z
+1
+20 K
+
+Output
+10 X 20 K 30 Z
+
+
+Test Case 3
+Input
+1
+100 Red
+2
+200 Blue
+300 Green
+
+Output
+100 Red 200 Blue 300 Green
+
+-----------------------------------------------------------------------------------------------------
+Question 8 — Find First Non-Repeating Character Using Hashtable
+Scenario:
+ A chatbot system analyzes user messages to detect unique keywords and reduce repetition errors.
+ To do this, the system must find the first character in a given message that appears only once.
+Since concurrency safety and fast lookup are required, a Hashtable is used to store character frequencies.
+Your task:
+Read a string (no spaces)
+
+
+Count the frequency of each character using a Hashtable
+
+
+Print the first non-repeating character
+
+
+If no such character exists, print:
+
+ -1
+Sample Test Cases
+
+ Test Case 1 (Given)
+Input
+swiss
+
+Output
+w
+
+Input
+aabbcc
+
+Output
+-1
+
+(No character appears only once)
+
+Test Case 3
+Input
+programming
+
+Output
+p
+
+(‘p’ is the first unique character)
+---------------------------------------------------------------------------------------------------------
+Question 9 — Store Student Objects in Hashtable and Print Names)
+Scenario:
+ A school management system stores student academic records in a Hashtable for secure and synchronized access.
+ Each record contains:
+Key → Student ID (Integer)
+
+
+Value → Student Object (id, name, grade)
+
+
+Your task:
+Read data for n students
+
+
+Store them in a Hashtable using Student ID as the key
+
+
+Print only the names of all students in any order
+ (Hashtable does NOT maintain insertion order)
+
+
+Sample Test Cases
+Test Case 1 (Given)
+Input
+3
+1 Alice 90
+2 Bob 85
+3 Charlie 95
+
+Output
+Alice Bob Charlie
+
+(Order may vary)
+
+Test Case 2
+Input
+2
+10 David 75
+20 Emma 92
+
+Output
+David Emma
+
+
+Test Case 3
+Input
+1
+100 John 88
+
+Output
+John
+------------------------------------------------------------------------------------------------------
+Question 10 — Update Value for a Given Key in Hashtable
+Scenario:
+ A company stores employee records using a Hashtable, where:
+Key → Employee ID (Integer)
+
+
+Value → Employee Name (String)
+
+
+If an employee legally changes their name or a correction is needed, the system must update the stored name.
+Your task:
+Store n employee entries in a Hashtable
+
+
+Read a key and a new value
+
+
+Update the value for that key if it exists
+
+
+Print all key-value pairs in any order
+
+
+
+
+ Sample Test Cases
+Test Case 1 (Given)
+Input
+3
+1 Alice
+2 Bob
+3 Charlie
+2 David
+
+Output
+1 Alice 2 David 3 Charlie
+
+(Order may vary)
+
+Test Case 2
+Input
+2
+10 Raj
+20 Simran
+20 Preeti
+
+Output
+10 Raj 20 Preeti
+
+Test Case 3
+Input
+2
+5 Cat
+6 Dog
+8 Tiger
+
+Output
+5 Cat 6 Dog
+
+(Key not found → no update)
+------------------------------------------------------------------------------------------------------------
+Question 11 — Find the Size of a Hashtable After Insertions
+Scenario:
+ A university stores course registration entries in a Hashtable, where:
+Key → Student ID
+
+
+Value → Course Code
+
+
+If a student updates or changes their course selection, inserting a pair with an already existing Student ID will overwrite the previous course.
+ Thus, the final size of the Hashtable depends on the number of unique keys.
+Your task:
+Insert n key-value pairs into a Hashtable
+
+
+If a key repeats, the value should be overwritten
+
+
+After all insertions, print the size of the Hashtable
+
+
+Sample Test Cases
+Test Case 1 (Given)
+Input
+4
+1 A
+2 B
+1 C
+3 D
+
+Output
+3
+
+Explanation:
+ Key 1 appears twice → second value overwrites first.
+ Final keys = {1, 2, 3} → size = 3
+
+Test Case 2
+Input
+3
+10 X
+20 Y
+30 Z
+
+Output
+3
+
+
+Test Case 3
+Input
+5
+5 Cat
+6 Dog
+5 Bird
+6 Tiger
+7 Fish
+
+Output
+3
+
+Explanation:
+ Keys 5 and 6 overwrite → unique keys = {5, 6, 7}
+-----------------------------------------------------------------------------------------------------
+Question 12 — Check if Two Hashtables Are Equal
+Scenario:
+ A company maintains employee records across two different backup systems.
+ Each system stores:
+Key → Employee ID
+
+
+Value → Employee Name
+
+
+To ensure data consistency, the company must verify whether both Hashtables contain exactly the same key-value pairs.
+Two Hashtables are considered equal if:
+They have the same keys, and
+
+
+Each key maps to the same value in both tables
+
+
+The order does NOT matter (Hashtable is unordered)
+
+
+Your task:
+Read two Hashtables
+
+
+Compare them
+
+
+Print:
+
+ TRUE
+ if they are equal, otherwise:
+
+ FALSE
+
+Sample Test Cases
+Test Case 1 (Given)
+Input
+2
+1 A
+2 B
+2
+2 B
+1 A
+
+Output
+TRUE
+
+Test Case 2
+Input
+3
+10 X
+20 Y
+30 Z
+3
+10 X
+20 Y
+40 Z
+
+Output
+FALSE
+
+Test Case 3
+Input
+2
+5 Cat
+6 Dog
+2
+5 Cat
+6 Tiger
+
+Output
+FALSE
+--------------------------------------------------------------------------------------------------------
+Question 13 — Find the Sum of All Values in a Hashtable
+Scenario:
+ A utility billing system stores meter readings for consumers in a Hashtable, where:
+Key → Consumer ID (Integer)
+
+
+Value → Units Consumed (Integer)
+
+
+To compute the total consumption for a locality, the system must sum all values stored in the Hashtable.
+Your task:
+Read n key-value pairs
+
+
+Store them in a Hashtable
+
+
+Find and print the sum of all values
+
+
+
+Sample Test Cases
+Test Case 1 (Given)
+Input
+3
+1 10
+2 20
+3 30
+
+Output
+60
+
+Test Case 2
+Input
+4
+5 100
+6 200
+7 300
+8 400
+
+Output
+1000
+
+Test Case 3
+Input
+2
+10 500
+20 500
+
+Output
+1000
+
+-----------------------------------------------------------------------------------------------
+Question 14 — Test Thread-Safety of a Hashtable (Scenario-Based)
+Scenario:
+ A telecom operator uses a shared transaction counter stored in a Hashtable to record customer requests handled by multiple service agents (threads). Because Hashtable is synchronized, concurrent updates should be safe.
+ You must simulate two worker threads that increment the same counter n times each and print the final counter value.
+Task:
+Use a Hashtable<String, Integer> (or similar) to store a single key "counter" with an integer value.
+
+
+Create two threads, each incrementing the "counter" value n times.
+
+
+After both threads finish, print the final counter value (expected 2 * n).
+
+
+Sample Test Cases
+Test Case 1 (Given)
+Input
+5
+
+Output
+10
+
+Explanation: two threads × 5 increments each = 10
+Test Case 2
+Input
+1
+
+Output
+2
+
+Explanation: two threads × 1 increment each = 2
+Test Case 3
+Input
+10
+Output
+20
+-------------------------------------------------------------------------------------------------
+Question 15 — Find the Most Frequent Element Using a Hashtable
+Scenario:
+ A survey company collects responses where each number represents a choice selected by users.
+ To analyze which option was chosen the most, the system uses a Hashtable to count how many times each number appears.
+Your task:
+Read an array of integers
+
+
+Count the frequency of each number using a Hashtable
+
+
+Print the most frequent element
+
+
+If multiple elements have the same highest frequency, print the smallest element among them
+
+
+
+Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+5
+1 2 2 3 1
+
+Output
+1
+
+Explanation:
+ Frequencies →
+ 1 → 2 times
+ 2 → 2 times
+ 3 → 1 time
+ Tie between 1 and 2 → choose smallest → 1
+
+Test Case 2
+Input
+6
+4 4 5 6 5 5
+
+Output
+5
+
+Explanation:
+ 4 → 2 times
+ 5 → 3 times
+ 6 → 1 time
+ Most frequent = 5
+
+Test Case 3
+Input
+4
+8 8 9 9
+
+Output
+8
+
+Explanation:
+ 8 and 9 both appear 2 times → choose smallest → 8
+------------------------------------------------------------------------------------------------------
