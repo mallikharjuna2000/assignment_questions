@@ -12816,3 +12816,562 @@ Input:
 Output:
 1 2 3 4 5
 ----------------------------------------------------------------------------------------------------------
+Day-43 List interface
+-----------------------
+QUESTION 1
+Problem Statement
+Write a function to create an ArrayList of integers from 1 to n and return its size. Create an ArrayList, add integers from 1 to n, and return its size.
+
+Input Format
+Single integer n
+Output Format
+Single integer — size of the ArrayList
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+1
+
+Sample 2
+ Input:
+3
+
+Output:
+3
+
+Sample 3
+ Input:
+5
+
+Output:
+5
+---------------------------------------------------------------------------------------------------------
+ QUESTION 2
+Problem Statement
+Write a function to check if an ArrayList of n integers contains a specific element k. Construct an ArrayList with integers 1..n and check whether k exists.
+
+Input Format
+Two integers: n k
+Output Format
+true / false (Java boolean printed as true/false)
+Sample Testcases
+Sample 1
+ Input:
+1 1
+
+Output:
+true
+
+Sample 2
+ Input:
+3 2
+
+Output:
+true
+
+Sample 3
+ Input:
+10 5
+
+Output:
+true
+-----------------------------------------------------------------------------------------------------------
+QUESTION 3
+Problem Statement
+Write a function to add an element k at index i in an ArrayList of n integers and return the size. Start with list 1..n, insert k at 0-based index i, and return size.
+
+Input Format
+Three integers: n i k
+Output Format
+Single integer — new size of the list
+Sample Testcases
+Sample 1
+ Input:
+1 0 2
+
+Output:
+2
+
+Sample 2
+ Input:
+3 1 6
+
+Output:
+4
+
+Sample 3
+ Input:
+5 5 100
+
+Output:
+6
+----------------------------------------------------------------------------------------------------------
+QUESTION 4
+Problem Statement
+Write a function to remove the first element from a LinkedList of n integers and return the removed element. Build a LinkedList with 1..n and remove the first element.
+
+Input Format
+Single integer n
+Output Format
+Single integer — the removed element
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+1
+
+Sample 2
+ Input:
+3
+
+Output:
+1
+
+Sample 3
+ Input:
+5
+
+Output:
+1
+----------------------------------------------------------------------------------------------------------
+QUESTION 5
+Problem Statement
+Write a function to reverse a LinkedList of n integers and return the first element after reversal. Build a LinkedList with 1..n, reverse it, and return the first element.
+
+Input Format
+Single integer n
+Output Format
+Single integer — the first element of the reversed list
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+1
+
+Sample 2
+ Input:
+3
+
+Output:
+3
+
+Sample 3
+ Input:
+5
+
+Output:
+5
+
+------------------------------------------------------------------------------------------------------
+ QUESTION 6
+Problem Statement
+Write a function to find the middle element of a LinkedList of n integers. Build a LinkedList with 1..n and return the middle element. (If n is even, return element at index n/2 using 0-based indexing — i.e., the second of the two middles.)
+
+Input Format
+Single integer n
+Output Format
+Single integer — the middle element as defined above
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+1
+
+Sample 2
+ Input:
+2
+
+Output:
+2
+
+(For n=2, middle index n/2 = 1 → element 2)
+Sample 3
+ Input:
+5
+
+Output:
+3
+---------------------------------------------------------------------------------------------
+QUESTION 7
+Problem Statement
+Write a function to add an element k at the end of a LinkedList of n integers and return the size. Build a LinkedList containing 1..n, append k to the end, and return the size.
+
+Input Format
+Two integers: n k
+Output Format
+Single integer — size of the LinkedList after insertion
+
+Sample Testcases
+Sample 1
+ Input:
+1 2
+
+Output:
+2
+
+Sample 2
+ Input:
+3 4
+
+Output:
+4
+
+Sample 3
+ Input:
+5 101
+
+Output:
+6
+
+---------------------------------------------------------------------------------------------------------------
+ QUESTION 8
+Problem Statement
+Write a function to create a Stack of integers from 1 to n and return its size. Push integers 1..n onto a Stack and return the stack size.
+
+Input Format
+Single integer n
+Output Format
+Single integer — size of the stack
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+1
+
+Sample 2
+ Input:
+3
+
+Output:
+3
+
+Sample 3
+ Input:
+5
+
+Output:
+5
+------------------------------------------------------------------------------------------------------
+QUESTION 9
+Problem Statement
+Write a function to pop an element from a Stack of n integers and return the popped element. Push 1..n onto a Stack (in that order) then pop and return the top.
+
+Input Format
+Single integer n
+Output Format
+Single integer — the popped element
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+1
+
+Sample 2
+ Input:
+3
+
+Output:
+3
+
+Sample 3
+ Input:
+5
+
+Output:
+5
+--------------------------------------------------------------------------------------------------------
+QUESTION 10
+Problem Statement
+Write a function to check if a Stack of n integers contains a specific element k. Push 1..n onto a Stack and check whether k exists.
+
+Input Format
+Two integers: n k
+Output Format
+true or false (Java boolean printed)
+
+Sample Testcases
+Sample 1
+ Input:
+1 1
+
+Output:
+true
+
+Sample 2
+ Input:
+3 2
+
+Output:
+true
+
+Sample 3
+ Input:
+10 5
+
+Output:
+true
+-------------------------------------------------------------------------------------------------------
+ QUESTION 11
+Problem Statement
+Write a function to push an element k onto a Stack of n integers and return the top element. Push 1..n, then push k and return the top.
+
+Input Format
+Two integers: n k
+Output Format
+Single integer — the top element after push
+
+Sample Testcases
+Sample 1
+ Input:
+1 2
+
+Output:
+2
+
+Sample 2
+ Input:
+3 4
+
+Output:
+4
+
+Sample 3
+ Input:
+5 101
+
+Output:
+101
+------------------------------------------------------------------------------------------------------------
+QUESTION 12
+Problem Statement
+Write a function to find the size of a Stack after pushing n integers and popping m times. Push 1..n, pop m times, and return remaining size.
+
+Input Format
+Two integers: n m
+Output Format
+Single integer — stack size after operations
+
+Sample Testcases
+Sample 1
+ Input:
+1 0
+
+Output:
+1
+
+Sample 2
+ Input:
+3 1
+
+Output:
+2
+
+Sample 3
+ Input:
+10 5
+
+Output:
+5
+----------------------------------------------------------------------------------------------------
+QUESTION 13
+Problem Statement
+Write a function to remove an element at index i from a Vector of n integers and return the removed element. Build a Vector with integers 1..n, remove element at 0-based index i, and print the removed value.
+
+Input Format
+Two integers: n i
+Output Format
+Single integer — the removed element
+
+Sample Testcases
+Sample 1
+ Input:
+1 0
+
+Output:
+1
+
+Sample 2
+ Input:
+3 1
+
+Output:
+2
+
+Sample 3
+ Input:
+10 5
+
+Output:
+6
+---------------------------------------------------------------------------------------------------------
+QUESTION 14
+Problem Statement
+Write a function to check if a Vector of n integers contains a specific element k. Construct a Vector with integers 1..n and check whether k exists.
+
+Input Format
+Two integers: n k
+Output Format
+true or false
+
+Sample Testcases
+Sample 1
+ Input:
+1 1
+
+Output:
+true
+
+Sample 2
+ Input:
+3 2
+
+Output:
+true
+
+Sample 3
+ Input:
+10 5
+
+Output:
+true
+--------------------------------------------------------------------------------------------------------
+QUESTION 15
+Problem Statement
+Write a function to find the sum of all elements in a Vector of n integers. Build a Vector with integers 1..n and print the sum.
+
+Input Format
+Single integer n
+Output Format
+Single integer — sum of elements 1 + 2 + ... + n
+
+Sample Testcases
+Sample 1
+ Input:
+1
+
+Output:
+1
+
+Sample 2
+ Input:
+3
+
+Output:
+6
+
+Sample 3
+ Input:
+10
+
+Output:
+55
+----------------------------------------------------------------------------------------------------------
+ QUESTION 16
+Problem Statement
+Write a program to add n elements to an ArrayList and print them. Read n integers, store them in an ArrayList, then print all elements in the same order separated by spaces.
+
+Input Format
+First integer n, followed by n integers (either on same line or next lines)
+Output Format
+Print the n elements separated by a single space.
+
+Sample Testcases
+Sample 1
+ Input:
+1 5
+
+Output:
+5
+
+Sample 2
+ Input:
+2 10 20
+
+Output:
+10 20
+
+Sample 3
+ Input:
+5 1 2 3 4 5
+
+Output:
+1 2 3 4 5
+-------------------------------------------------------------------------------------------------------
+ QUESTION 17
+Problem Statement
+Write a program to reverse a LinkedList. Read a sequence of integers (unknown count) from input, store them in a LinkedList, and print them in reverse order.
+
+Input Format
+Sequence of integers (space or newline separated). Read until EOF.
+Output Format
+The integers printed in reverse order separated by a single space.
+Sample Testcases
+Sample 1
+ Input:
+1 2
+
+Output:
+2 1
+
+Sample 2
+ Input:
+1 2 3 4 5
+
+Output:
+5 4 3 2 1
+
+Sample 3
+ Input:
+10 20 30
+
+Output:
+30 20 10
+-------------------------------------------------------------------------------------------------------
+QUESTION 18
+Problem Statement
+Write a program to implement a Stack-based balanced parentheses checker. Given a string containing parentheses (), {}, [], print true if balanced, otherwise false.
+
+Input Format
+Single line: a string containing only brackets (){}[] (no spaces)
+Output Format
+true or false
+
+Sample Testcases
+Sample 1
+ Input:
+()
+
+Output:
+true
+
+Sample 2
+ Input:
+({)
+
+Output:
+false
+
+Sample 3
+ Input:
+((()))
+
+Output:
+true
+--------------------------------------------------------------------------------------------------------
