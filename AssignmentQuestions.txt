@@ -13866,3 +13866,420 @@ Sample 3
 Output:
 6
 -------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+Day-45 Set with Custom objects
+=================================
+1) HashSet of CustomInteger — return size
+Problem: Write a function to create a HashSet of custom CustomInteger objects from 1 to n and return its size.
+Input format:
+ n
+Output format:
+ size (integer)
+3 sample testcases
+Sample 1
+ Input:
+
+ 5
+ Output:
+
+ 5
+
+
+Sample 2
+ Input:
+
+ 1
+ Output:
+
+ 1
+
+
+Sample 3
+ Input:
+
+ 10
+ Output:
+
+ 10
+
+--------------------------------------------------------------------------------------------------------
+2) Store Student objects in a HashSet and print unique names (uniqueness by id)
+Problem: Store n Student objects in a HashSet and print their names. The Student class must use id for equality (i.e., equals and hashCode based on id). Use a LinkedHashSet so insertion order is preserved when printing.
+Input format:
+ First line: n
+ Next n lines: id name
+Output format:
+ Space-separated names of unique students in insertion order
+3 sample testcases
+Sample 1
+ Input:
+ 3
+1 Alice
+2 Bob
+3 Alice
+
+ Output:
+ Alice Bob Alice
+ (Note: Because equality is by id, id=3 name=Alice is a distinct id, so both Alice entries print.)
+
+
+Sample 2
+ Input:
+ 2
+1 Tom
+2 Tom
+
+ Output:
+ Tom Tom
+
+
+Sample 3
+ Input:
+ 4
+1 A
+2 B
+3 C
+2 B
+ Output:
+
+ A B C
+ (id=2 duplicate prevented, insertion order preserved)
+-----------------------------------------------------------------------------------------------
+3) TreeSet of Book objects — print titles sorted
+Problem: Store n Book objects in a TreeSet and print titles in lexicographical order. Book implements Comparable by title.
+Input format:
+ First line: n
+ Next n lines: title price (title is a single token)
+Output format:
+ Space-separated book titles in sorted order
+3 sample testcases
+Sample 1
+
+ Input:
+ 3
+A 10
+C 20
+B 15
+
+ Output:
+ A B C
+
+Sample 2
+ Input:
+ 2
+X 5
+X 20
+
+ Output:
+
+ X
+ (duplicate title collapsed by TreeSet ordering; only one entry remains)
+
+
+Sample 3
+
+ Input:
+ 5
+E 1
+A 2
+C 3
+B 4
+D 5
+
+ Output:
+ A B C D E
+------------------------------------------------------------------------------------------------------
+4) Remove duplicate Employee objects from HashSet by id
+Problem: Read n employees (id and name). Remove duplicates based on id and print the unique list (preserve insertion order).
+Input format:
+ First line: n
+ Next n lines: id name
+Output format:
+ List printed in format: [(id, "name"), (id, "name"), ...] preserving first occurrence of each id.
+3 sample testcases
+Sample 1
+ Input:
+ 4
+1 Alice
+2 Bob
+1 Alice
+3 Charlie
+
+ Output:
+ [(1, "Alice"), (2, "Bob"), (3, "Charlie")]
+
+Sample 2
+ Input:
+ 2
+1 Eve
+1 Tom
+
+ Output:
+ [(1, "Eve")]
+ (first occurrence preserved)
+
+
+Sample 3
+ Input:
+ 5
+1 A
+2 B
+2 B
+3 C
+4 D
+
+ Output:
+ [(1, "A"), (2, "B"), (3, "C"), (4, "D")]
+----------------------------------------------------------------------------------------------------
+5) LinkedHashSet of Product objects — print insertion-order names
+Problem: Store n Product objects in a LinkedHashSet (uniqueness by name) and print product names in insertion order.
+Input format:
+ First line: n
+ Next n lines: name price
+Output format:
+ Space-separated product names in insertion order
+3 sample testcases
+Sample 1
+ Input:
+ 3
+P1 100
+P2 200
+P3 150
+
+ Output:
+ P1 P2 P3
+
+Sample 2
+ Input:
+ 2
+Y 10
+X 20
+
+ Output:
+ Y X
+
+Sample 3
+ Input:
+ 5
+A 1
+B 2
+C 3
+D 4
+E 5
+
+ Output:
+ A B C D E
+
+------------------------------------------------------------------------------------------------------
+6) Merge two HashSets of Book objects (unique by id)
+Problem: Merge two sets of Book objects (each book: id and title) into a single set of unique books (uniqueness by id) and print the merged list as: [(id, "title"), ...]. Input will provide sizes for both sets.
+Input format:
+ First line: s1 (size of first set)
+ Next s1 lines: id title
+ Next line: s2 (size of second set)
+ Next s2 lines: id title
+Output format:
+ [(id, "title"), (id, "title"), ...] — merged; preserve order: first all unique from set1 in their order, then from set2 that weren't in set1 in their order.
+3 sample testcases
+Sample 1
+
+ Input:
+ 3
+1 A
+2 B
+2 B
+3 C
+ (Interpretation: s1=3: (1 A),(2 B),(2 B) then s2=1: (3 C))
+
+ Output:
+ [(1, "A"), (2, "B"), (3, "C")]
+
+Sample 2
+ Input:
+ 1
+1 X
+1
+1 Y
+
+ Output:
+ [(1, "X")]
+ (id=1 already in set1 so set2's id=1 ignored)
+
+
+Sample 3
+ Input:
+ 4
+1 A
+2 B
+2 B
+3 C
+4 D
+4
+1 P
+2 Q
+3 R
+4 S
+
+ Output:
+ [(1, "A"), (2, "B"), (3, "C"), (4, "D")]
+-------------------------------------------------------------------------------------------------------
+7) LinkedHashSet of Car objects — print models (uniqueness by model)
+Problem: Store n Car objects in a LinkedHashSet with uniqueness determined by model and print models in insertion order.
+Input format:
+ First line: n
+ Next n lines: model year
+Output format:
+ Space-separated models in insertion order
+3 sample testcases
+Sample 1
+
+ Input:
+ 3
+M1 2020
+M2 2021
+M3 2019
+
+ Output:
+ M1 M2 M3
+
+Sample 2
+ Input:
+ 2
+Y 2010
+X 2020
+
+ Output:
+ Y X
+
+Sample 3
+ Input:
+ 5
+A 2015
+B 2016
+C 2017
+D 2018
+E 2019
+
+ Output:
+ A B C D E
+----------------------------------------------------------------------------------------------------------
+8) Sort Employee objects by salary in a TreeSet and print names
+Problem: Read n Employee objects (name and salary), store them in a TreeSet ordered by salary, and print names in ascending salary order. If salaries tie, break ties by name to avoid losing distinct employees.
+Input format:
+ First line: n
+ Next n lines: name salary
+Output format:
+ Space-separated names sorted by salary (then name)
+3 sample testcases
+Sample 1
+ Input:
+ 3
+Alice 50000
+Bob 60000
+Charlie 45000
+
+ Output:
+ Charlie Alice Bob
+
+Sample 2
+ Input:
+ 2
+Tom 30000
+Sam 50000
+
+ Output:
+ Tom Sam
+
+Sample 3 (tie salaries)
+ Input:
+ 3
+A 10000
+B 10000
+C 15000
+
+ Output:
+ A B C
+----------------------------------------------------------------------------------------------------------------
+9) Count unique Student objects in HashSet by name
+Problem: Count unique students by name. Student equality and hash code should be based on name. Print the size of the set.
+Input format:
+ First line: n
+ Next n lines: id name
+Output format:
+ Single integer: number of unique names
+3 sample testcases
+Sample 1
+ Input:
+ 4
+1 Alice
+2 Bob
+3 Alice
+4 Bob
+
+ Output:
+ 2
+
+Sample 2
+ Input:
+ 2
+1 Tom
+2 Tom
+
+ Output:
+ 1
+
+Sample 3
+ Input:
+ 5
+1 A
+2 B
+3 A
+4 C
+5 B
+
+ Output:
+ 3
+-------------------------------------------------------------------------------------------------------------
+10) Check if two HashSets of Student objects are equal (equality by id)
+Problem: Read two sets of students and check if they are equal as sets. Student equality is based on id. Print TRUE if sets are equal, otherwise FALSE.
+Input format:
+ First line: n1
+ Next n1 lines: id name
+ Next line: n2
+ Next n2 lines: id name
+Output format:
+ TRUE or FALSE (uppercase)
+3 sample testcases
+Sample 1
+ Input:
+ 2
+1 Alice
+2 Bob
+2
+2 Bob
+1 Alice
+
+ Output:
+ TRUE
+
+Sample 2
+ Input:
+ 1
+1 Eve
+1
+1 Eve
+
+ Output:
+ TRUE
+
+Sample 3
+ Input:
+ 2
+1 X
+2 Y
+2
+1 X
+3 Z
+
+ Output:
+ FALSE
