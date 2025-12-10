@@ -14283,3 +14283,863 @@ Sample 3
 
  Output:
  FALSE
+==============================================================================================================
+Queue interface
+=================
+1) Add n elements to an ArrayDeque and print them from the front
+Problem: Use an ArrayDeque to add n integers to the end and print all elements from the front.
+Input format:
+ First line: n
+ Second line: a1 a2 ... an
+Output format:
+ Space-separated elements printed from front to back.
+3 sample testcases
+Sample 1
+ Input:
+ 3
+1 2 3
+
+ Output:
+ 1 2 3
+
+Sample 2
+ Input:
+ 2
+10 20
+
+ Output:
+ 10 20
+
+Sample 3
+ Input:
+ 5
+1 2 3 4 5
+
+ Output:
+ 1 2 3 4 5
+---------------------------------------------------------------------------------------------------------
+2) Reverse an ArrayDeque
+Problem: Use an ArrayDeque to store elements and print them in reverse order.
+Input format:
+ A single line containing space-separated integers.
+Output format:
+ Elements printed in reverse order (space-separated).
+3 sample testcases
+Sample 1
+ Input:
+ 1 2 3 4
+
+ Output:
+ 4 3 2 1
+
+Sample 2
+ Input:
+ 1 2
+
+ Output:
+ 2 1
+
+Sample 3
+ Input:
+ 1 2 3 4 5
+
+ Output:
+ 5 4 3 2 1
+------------------------------------------------------------------------------------------------------------
+3) Implement a queue using ArrayDeque and process n elements
+Problem: Use an ArrayDeque as a queue to add n elements at the end and remove them from the front (FIFO) printing them.
+Input format:
+ First line: n
+ Second line: a1 a2 ... an
+Output format:
+ Space-separated elements removed from front in FIFO order.
+3 sample testcases
+Sample 1
+ Input:
+ 3
+1 2 3
+
+ Output:
+ 1 2 3
+
+Sample 2
+ Input:
+ 2
+10 20
+
+ Output:
+ 10 20
+
+Sample 3
+ Input:
+ 5
+1 2 3 4 5
+
+ Output:
+ 1 2 3 4 5
+---------------------------------------------------------------------------------------------------------------
+4) Implement a stack using ArrayDeque and pop n elements
+Problem: Use an ArrayDeque as a stack to push n elements and pop them in LIFO order printing them.
+Input format:
+ First line: n
+ Second line: a1 a2 ... an
+Output format:
+ Space-separated elements popped in LIFO order.
+3 sample testcases
+Sample 1
+ Input:
+ 3
+1 2 3
+
+ Output:
+ 3 2 1
+
+Sample 2
+ Input:
+ 2
+10 20
+
+ Output:
+ 20 10
+
+Sample 3
+ Input:
+ 5
+1 2 3 4 5
+
+ Output:
+ 5 4 3 2 1
+--------------------------------------------------------------------------------------------------------------
+5) Check if an ArrayDeque is a palindrome
+Problem: Use an ArrayDeque to check whether the sequence of integers is a palindrome.
+Input format:
+ A single line containing space-separated integers.
+Output format:
+ true or false (Java boolean literal) — the provided earlier example used uppercase TRUE, but standard Java output is true/false. (If you require uppercase, replace System.out.println(isPalindrome ? "TRUE" : "FALSE");.)
+3 sample testcases
+Sample 1
+ Input:
+ 1 2 2 1
+
+ Output:
+ true
+
+Sample 2
+ Input:
+ 1 2
+
+ Output:
+ false
+
+Sample 3
+ Input:
+ 1 2 3 2 1
+
+ Output:
+ True
+--------------------------------------------------------------------------------------------------------
+6) Sum of elements in an ArrayDeque
+Problem: Read integers into an ArrayDeque and print their sum.
+Input format:
+ A single line with space-separated integers.
+Output format:
+ Single integer — the sum.
+3 sample testcases
+Sample 1
+ Input:
+ 1 2 3 4
+
+ Output:
+ 10
+
+Sample 2
+ Input:
+ 5 10 20
+
+ Output:
+ 35
+
+Sample 3
+ Input:
+ 100 200 300
+
+ Output:
+ 600
+-------------------------------------------------------------------------------------------------------------
+7) Remove n elements from the front of an ArrayDeque
+Problem: Given a deque of size elements and an integer n, remove n elements from the front and print the remaining deque (Java toString() format).
+Input format:
+ Line1: size
+ Line2: a1 a2 ... asize
+ Line3: n (0 ≤ n ≤ size)
+Output format:
+ Print the resulting ArrayDeque using System.out.println(deque); (i.e., [x, y, z])
+3 sample testcases
+Sample 1
+ Input:
+
+ 5
+1 2 3 4 5
+2
+
+ Output:
+ [3, 4, 5]
+
+Sample 2
+ Input:
+ 1
+1
+1
+
+ Output:
+ []
+
+Sample 3
+ Input:
+ 10
+1 2 3 4 5 6 7 8 9 10
+5
+
+ Output:
+ [6, 7, 8, 9, 10]
+--------------------------------------------------------------------------------------------------------
+8) Add elements alternately to both ends of an ArrayDeque
+Problem: Add n elements alternately to back and front of an ArrayDeque, starting with the back (index 0 → back, index 1 → front, index 2 → back, ...). Print resulting deque using toString().
+Input format:
+ Line1: n
+ Line2: a1 a2 ... an
+Output format:
+ ArrayDeque printed as [ ... ].
+3 sample testcases
+Sample 1
+ Input:
+ 4
+1 2 3 4
+
+ Output:
+ [4, 2, 1, 3]
+ (Steps: addLast 1 => [1]; addFirst 2 => [2,1]; addLast 3 => [2,1,3]; addFirst 4 => [4,2,1,3])
+
+
+Sample 2
+ Input:
+ 1
+5
+ 
+Output:
+ [5]
+
+Sample 3
+ Input:
+ 2
+10 20
+
+ Output:
+ [20, 10]
+-----------------------------------------------------------------------------------------------------------
+9) Merge two sorted ArrayDeques
+Problem: Merge two sorted deques (ascending order) into a single sorted deque (ascending) and print it (as [ ... ]).
+Input format:
+ Line1: first deque elements (space-separated)
+ Line2: second deque elements (space-separated)
+Output format:
+ Merged sorted ArrayDeque printed as [ ... ].
+3 sample testcases
+Sample 1
+ Input:
+ 1 3 5
+2 4 6
+
+ Output:
+ [1, 2, 3, 4, 5, 6]
+
+Sample 2
+ Input:
+ 2 4
+1 3 5
+
+ Output:
+ [1, 2, 3, 4, 5]
+
+Sample 3
+ Input:
+ 10 30
+20
+
+ Output:
+ [10, 20, 30]
+------------------------------------------------------------------------------------------------------------
+10) Find the maximum element in an ArrayDeque
+Problem: Read numbers into an ArrayDeque and print the maximum element.
+Input format:
+ Single line of space-separated integers.
+Output format:
+ Single integer — the maximum value.
+3 sample testcases
+Sample 1
+ Input:
+ 1 5 3 4 2
+
+ Output:
+ 5
+
+Sample 2
+ Input:
+ 10 20
+
+ Output:
+ 20
+
+Sample 3
+ Input:
+ 5 2 8 1
+
+ Output:
+ 8
+------------------------------------------------------------------------------------------------------
+11) Remove duplicates from an ArrayDeque (preserve first occurrence)
+Problem: Remove duplicate elements while preserving the order of first occurrence, then print resulting deque as [ ... ].
+Input format:
+ A single line of space-separated integers.
+Output format:
+ ArrayDeque printed as [ ... ] with duplicates removed.
+3 sample testcases
+Sample 1
+ Input:
+ 1 2 2 3 3
+
+ Output:
+ [1, 2, 3]
+
+Sample 2
+ Input:
+ 1
+
+ Output:
+ [1]
+
+Sample 3
+ Input:
+ 10 20 20
+
+ Output:
+ [10, 20]
+
+--------------------------------------------------------------------------------------------------------
+12) Sort an ArrayDeque
+Problem: Read elements into an ArrayDeque, sort them ascending, and print the sorted deque as [ ... ].
+Input format:
+ Single line of space-separated integers.
+Output format:
+ Sorted ArrayDeque printed as [ ... ].
+3 sample testcases
+Sample 1
+ Input:
+ 3 1 4 2
+
+ Output:
+ [1, 2, 3, 4]
+
+Sample 2
+ Input:
+ 1
+
+ Output:
+ [1]
+
+Sample 3
+ Input:
+ 5 3 1
+
+ Output:
+ [1, 3, 5]
+----------------------------------------------------------------------------------------------------------
+13) Process n elements in an ArrayDeque in reverse order
+Problem: Read elements into ArrayDeque and print them in reverse order by popping from back.
+Input format:
+ A single line of space-separated integers.
+Output format:
+ Space-separated integers printed from last to first.
+3 sample testcases
+Sample 1
+ Input:
+ 1 2 3
+
+ Output:
+ 3 2 1
+
+Sample 2
+ Input:
+ 10 20
+
+ Output:
+ 20 10
+
+Sample 3
+ Input:
+ 100 200 300
+
+ Output:
+ 300 200 100
+--------------------------------------------------------------------------------------------------------
+PriorityQueue
+----------------
+1) Add n integers to a PriorityQueue and print in ascending order
+Problem: Use a PriorityQueue to add n integers and poll all elements to print them in ascending order.
+Input format:
+ First line: n
+ Second line: a1 a2 ... an
+Output format:
+ Space-separated integers in ascending order.
+3 sample testcases
+Sample 1
+ Input:
+ 3
+3 1 2
+
+ Output:
+ 1 2 3
+
+Sample 2
+ Input:
+ 2
+10 20
+
+ Output:
+ 10 20
+
+Sample 3
+ Input:
+ 5
+5 2 8 1 9
+
+ Output:
+ 1 2 5 8 9
+-----------------------------------------------------------------------------------------------------------
+2) Max-heap using PriorityQueue (print descending)
+Problem: Use a PriorityQueue with a reverse-order comparator to create a max-heap and print elements in descending order.
+Input format:
+ First line: n
+ Second line: a1 a2 ... an
+Output format:
+ Space-separated integers in descending order.
+3 sample testcases
+Sample 1
+ Input:
+ 3
+1 2 3
+
+ Output:
+ 3 2 1
+
+Sample 2
+ Input:
+ 2
+10 20
+
+ Output:
+ 20 10
+
+Sample 3
+ Input:
+ 5
+5 2 8 1 9
+
+ Output:
+ 9 8 5 2 1
+------------------------------------------------------------------------------------------------------
+3) Merge k sorted arrays using a PriorityQueue
+Problem: Merge k sorted arrays (each sorted ascending) into one sorted list using a PriorityQueue.
+Input format:
+ Each line: one sorted array (space-separated). Read until an empty line or EOF.
+Output format:
+ Space-separated merged sorted elements.
+3 sample testcases
+Sample 1
+ Input:
+ 1 3 5
+2 4 6
+7 8 9
+
+ Output:
+ 1 2 3 4 5 6 7 8 9
+
+Sample 2
+ Input:
+ 1 2
+3 4
+
+ Output:
+ 1 2 3 4
+
+Sample 3
+ Input:
+ 10 20
+30 40
+50
+
+ Output:
+ 10 20 30 40 50
+---------------------------------------------------------------------------------------------------
+4) Sum of the top n elements in a PriorityQueue
+Problem: Given an array of numbers and integer n, use a max-heap to sum the n largest elements.
+Input format:
+ Line1: elements (space-separated)
+ Next token: integer n
+Output format:
+ Single integer — the sum of n largest elements.
+3 sample testcases
+Sample 1
+ Input:
+ 5 2 8 1 9
+3
+
+ Output:
+ 22
+ (top 3: 9+8+5 = 22)
+
+
+Sample 2
+ Input:
+ 10 20
+1
+
+ Output:
+ 20
+
+Sample 3
+ Input:
+ 5 3 8 1 4
+2
+
+ Output:
+ 13
+ (top 2: 8+5 = 13)
+----------------------------------------------------------------------------------------------------
+5) Store Student objects in a PriorityQueue sorted by grade (max-heap)
+Problem: Create Student(id, name, grade) and store in a max-heap to print names in descending grade order.
+Input format:
+ First line: n
+ Next n lines: id name grade
+Output format:
+ Space-separated student names in descending grade order.
+3 sample testcases
+Sample 1
+ Input:
+ 3
+1 Alice 90
+2 Bob 85
+3 Charlie 95
+
+ Output:
+ Charlie Alice Bob
+
+Sample 2
+ Input:
+ 1
+1 Eve 80
+
+ Output:
+ Eve
+
+Sample 3
+ Input:
+ 2
+1 Tom 75
+2 Sam 85
+
+ Output:
+ Sam Tom
+-------------------------------------------------------------------------------------------------------------
+6) Find median of n elements using two PriorityQueues
+Problem: Compute the median of the given numbers using two heaps: max-heap (lower half) and min-heap (upper half).
+Input format:
+ Single line: a1 a2 ... an
+Output format:
+ If median is integer, print integer; otherwise print decimal (e.g., 1.5).
+3 sample testcases
+Sample 1
+ Input:
+ 1 2 3 4 5
+
+ Output:
+ 3
+
+Sample 2
+ Input:
+ 1 2
+
+ Output:
+ 1.5
+
+Sample 3
+ Input:
+ 10 20 30 40 50
+
+ Output:
+ 30
+------------------------------------------------------------------------------------------------------------
+7) Remove duplicates from a PriorityQueue (print ascending)
+Problem: Remove duplicates from the input numbers and print unique elements in ascending order.
+Input format:
+ Single line: space-separated integers.
+Output format:
+ Space-separated unique sorted integers.
+3 sample testcases
+Sample 1
+ Input:
+ 1 2 2 3 3
+
+ Output:
+ 1 2 3
+
+Sample 2
+ Input:
+ 5 5 5
+
+ Output:
+ 5
+
+Sample 3
+ Input:
+ 10 10 20 20
+
+ Output:
+ 10 20
+
+---------------------------------------------------------------------------------------------------------
+8) kth largest element using a min-heap of size k
+Problem: Find the kth largest element by maintaining a min-heap of size k.
+Input format:
+ First line: elements (space-separated)
+ Next token: integer k
+Output format:
+ Single integer — the kth largest element.
+3 sample testcases
+Sample 1
+ Input:
+ 4 2 7 1 5
+3
+
+ Output:
+ 4
+
+Sample 2
+ Input:
+ 10 20 30
+2
+
+ Output:
+ 20
+
+Sample 3
+ Input:
+ 5 3 8 1 4
+2
+
+ Output:
+ 5
+-----------------------------------------------------------------------------------------------------------
+9) Store Product objects in a PriorityQueue sorted by price (min-heap)
+Problem: Create Product(name, price) and print names sorted by ascending price using a min-heap.
+Input format:
+ First line: n
+ Next n lines: name price
+Output format:
+ Space-separated product names in ascending price.
+3 sample testcases
+Sample 1
+ Input:
+ 3
+P1 100
+P2 50
+P3 200
+
+ Output:
+ P2 P1 P3
+
+Sample 2
+ Input:
+ 2
+X 50
+Y 100
+
+ Output:
+ X Y
+
+Sample 3
+ Input:
+ 5
+A 5
+B 10
+C 15
+D 20
+E 25
+
+ Output:
+ A B C D E
+------------------------------------------------------------------------------------------------------
+10) Process n elements in a PriorityQueue and print the top k (descending)
+Problem: Using a max-heap, print the top k elements in descending order.
+Input format:
+ Line1: elements (space-separated)
+ Line2: integer k
+Output format:
+ Space-separated top k elements in descending order.
+3 sample testcases
+Sample 1
+ Input:
+ 5 2 8 1 9
+3
+
+ Output:
+ 9 8 5
+
+Sample 2
+ Input:
+ 10 20
+1
+
+Output:
+ 20
+
+Sample 3
+ Input:
+ 5 3 8 1 4
+3
+
+ Output:
+ 8 5 4
+----------------------------------------------------------------------------------------------------------------
+11) Smallest range covering k sorted lists (using PQ)
+Problem: Given k sorted lists, find the smallest range [start, end] that includes at least one element from each list.
+Input format:
+ Each line: one sorted list (space-separated). Read until empty line/EOF.
+Output format:
+ Range printed as [start, end].
+3 sample testcases
+Sample 1
+ Input:
+ 1 2 3
+2 3 4
+3 4 5
+
+ Output:
+ [3, 3]
+
+Sample 2
+ Input:
+ 10 20
+15 25
+20 30
+
+ Output:
+ [15, 20]
+
+Sample 3
+ Input:
+ 1 3
+2 4
+5 6
+
+ Output:
+ [2, 5]
+------------------------------------------------------------------------------------------------------
+12) Remove the top k elements and print remaining (ascending)
+Problem: Remove top k largest elements using a max-heap and print remaining elements in ascending order.
+Input format:
+ Line1: elements (space-separated)
+ Line2: integer k
+Output format:
+ Remaining elements printed as a Java list (e.g., [1, 2]) in ascending order.
+3 sample testcases
+Sample 1
+ Input:
+ 5 2 8 1 9
+3
+
+ Output:
+ [1, 2]
+
+Sample 2
+ Input:
+ 10 20
+1
+
+ Output:
+ [10]
+
+Sample 3
+ Input:
+ 5 3 8 1
+2
+
+ Output:
+ [1, 3]
+
+--------------------------------------------------------------------------------------------------------
+13) Store Task objects in a PriorityQueue sorted by deadline (min-heap)
+Problem: Create Task(name, deadline) and print task names in ascending deadline order.
+Input format:
+ First line: n
+ Next n lines: name deadline
+Output format:
+ Space-separated task names sorted by deadline (earliest first).
+3 sample testcases
+Sample 1
+ Input:
+ 2
+Y 5
+Z 15
+
+ Output:
+ Y Z
+
+Sample 2
+ Input:
+ 1
+X 10
+
+ Output:
+ X
+
+Sample 3
+ Input:
+ 5
+A 3
+B 1
+C 4
+D 2
+E 5
+
+ Output:
+ B D A C E
+----------------------------------------------------------------------------------------------------
+14) Synchronize access to a PriorityQueue in multithreaded environment (counter example)
+Problem: Demonstrate thread-safe usage via Collections.synchronizedCollection wrapping a PriorityQueue, and two threads increment a shared counter n times each. Print final sum.
+Input format:
+ Single integer n (number of increments per thread).
+Output format:
+ Single integer — final counter value (expected 2*n).
+3 sample testcases
+Sample 1
+ Input:
+ 5
+
+ Output:
+ 10
+
+Sample 2
+ Input:
+ 1
+
+ Output:
+ 2
+
+Sample 3
+ Input:
+ 10
+
+ Output:
+ 20
+========================================================================================================
