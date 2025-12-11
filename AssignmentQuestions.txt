@@ -17558,3 +17558,1303 @@ Output
 Explanation:
  8 and 9 both appear 2 times → choose smallest → 8
 ------------------------------------------------------------------------------------------------------
+
+Java 8 features
+=================
+Question 1 — Sort Strings Using a Standalone Comparator
+Scenario:
+ A university event team stores participant names in the order they register.
+ Before printing certificates, the names must be sorted alphabetically.
+ You must write a standalone Comparator class (i.e., a separate class that implements Comparator<String>) to sort the list of names lexicographically.
+Your task:
+Read n strings
+
+
+Use Collections.sort() with a custom Comparator<String>
+
+
+Print the sorted strings in ascending alphabetical order
+
+
+
+Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+3
+Charlie Alice Bob
+
+Output
+Alice Bob Charlie
+
+Test Case 2
+Input
+4
+Banana Apple Mango Cherry
+
+Output
+Apple Banana Cherry Mango
+
+Test Case 3
+Input
+2
+zebra ant
+
+Output
+ant zebra
+
+------------------------------------------------------------------------------------------------------
+Question 2 — Execute n Tasks Using a Standalone Runnable
+Scenario:
+ A company has multiple background tasks to run simultaneously—such as sending emails, generating reports, and updating logs.
+ To simulate this, you must create a standalone class that implements Runnable, where each thread prints the task name it is responsible for.
+Your task:
+Read n task names
+
+
+For each task name, create a thread using a standalone Runnable class
+
+
+Start all threads so that each prints its assigned task name
+
+
+The order of output may vary due to thread scheduling
+
+
+
+Sample Test Cases
+ample Test Case 1 (Given)
+Input
+3
+Task1 Task2 Task3
+
+Output
+Task1 Task2 Task3
+
+(Actual order may differ)
+
+Test Case 2
+Input
+2
+Email Report
+
+Output
+Email Report
+
+Test Case 3
+Input
+4
+A B C D
+
+Output
+A B C D
+------------------------------------------------------------------------------------------------
+Question 3 — Filter Numbers Using a Standalone Predicate
+Scenario:
+ A data analysis tool processes a large list of numbers and needs to filter out values below a certain threshold.
+ To keep the filtering logic modular and reusable, you must implement a standalone class that implements Predicate<Integer>.
+Your task:
+Read n integers
+
+
+Read a threshold value
+
+
+Use a standalone Predicate<Integer> implementation to filter and print only the numbers greater than or equal to the threshold
+
+
+Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+5
+1 2 3 4 5
+3
+
+Output
+3 4 5
+
+Test Case 2
+Input
+4
+10 5 20 1
+6
+
+Output
+10 20
+
+Test Case 3
+Input
+3
+7 8 9
+10
+Output
+(No output → no number ≥ 10)
+------------------------------------------------------------------------------------------------------
+Question 4 — Compute Sum of Numbers Using a Standalone Function
+Scenario:
+ A finance application receives a list of transaction amounts and needs to compute the total sum.
+ To keep the logic modular for reuse in reports and analytics, the summation must be implemented using a standalone class that implements:
+Function<List<Integer>, Integer>
+
+Your task:
+Read n integers
+
+
+Store them in a list
+
+
+Use a standalone Function class to compute and return the sum of all numbers
+
+
+Print the resulting sum
+
+
+
+Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+6
+1 2 3 4 5 6
+
+Output
+21
+
+Test Case 2
+Input
+3
+10 20 30
+
+Output
+60
+
+Test Case 3
+Input
+5
+5 5 5 5 5
+
+Output
+25
+------------------------------------------------------------------------------------------
+Question 5 — Sort Student Objects by Grade Using a Standalone Comparator
+Scenario:
+ A college maintains student performance data and needs to generate a merit list.
+ Students must be sorted based on their grade, with the highest scorer appearing first.
+ To achieve this, write a standalone Comparator<Student> class that compares two Student objects by their grade in descending order.
+Each Student object contains:
+id (Integer)
+
+
+name (String)
+
+
+grade (Integer)
+
+
+Your task:
+Read n Student records
+
+
+Use a standalone Comparator to sort students by grade (highest first)
+
+
+Print the sorted student names in order
+
+
+ Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+3
+1 Alice 90
+2 Bob 85
+3 Charlie 95
+
+Output
+Charlie Alice Bob
+Explanation:
+ Grades sorted descending → 95, 90, 85.
+
+Test Case 2
+Input
+4
+10 David 70
+11 Emma 92
+12 Frank 92
+13 Grace 60
+
+Output
+Emma Frank David Grace
+(Two students tied with grade 92; their relative order may vary)
+
+Test Case 3
+Input
+2
+5 John 50
+6 Mary 75
+
+Output
+Mary John
+-------------------------------------------------------------------------------------------------------
+Question 6 — Sort Strings Using an Inner Comparator Class
+Scenario:
+ A library system stores book titles entered by staff members. Before generating the catalog, the titles must be sorted alphabetically.
+ To organize comparison logic neatly inside the main class, an inner class implementing Comparator<String> will be used.
+Your task:
+Read n strings
+
+
+Use an inner Comparator class to sort the strings lexicographically (A–Z)
+
+
+Print the sorted strings in ascending order
+
+
+ Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+3
+Charlie Alice Bob
+
+Output
+Alice Bob Charlie
+
+
+Test Case 2
+Input
+4
+Mango Apple Peach Banana
+
+Output
+Apple Banana Mango Peach
+
+
+Test Case 3
+Input
+2
+zoo ant
+
+Output
+ant zoo
+
+-------------------------------------------------------------------------------------------------------------
+Question 7 — Execute Tasks Using an Inner Runnable Class
+Scenario:
+ A server maintenance tool needs to run several background tasks such as cleanup, backup, and monitoring.
+ To organize the multithreading logic within a single class, an inner class implementing Runnable is used.
+ Each thread should print the task name it is responsible for.
+Your task:
+Read n task names
+For each task, create a thread using an inner Runnable class
+Start all threads
+Each thread prints its assigned task name
+Output order may vary due to thread scheduling
+
+
+
+Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+3
+Task1 Task2 Task3
+
+Output
+Task1 Task2 Task3
+
+(Output order may vary)
+
+Test Case 2
+Input
+2
+Email Report
+
+Output
+Email Report
+
+
+Test Case 3
+Input
+4
+A B C D
+
+Output
+A B C D
+
+(Order may be different every time)
+---------------------------------------------------------------------------------------------------
+Question 8 — Filter Numbers Using an Inner Predicate Class
+Scenario:
+ A data processing tool needs to clean incoming numerical readings by removing all values below a certain threshold.
+ To keep the filtering logic encapsulated, the main class will contain an inner class that implements Predicate<Integer>.
+Your task:
+Read n integers
+
+
+Read a threshold value
+
+
+Use an inner Predicate<Integer> class to filter and keep only numbers greater than or equal to the threshold
+
+
+Print the filtered numbers in the same order they appeared in the input
+
+
+Sample Test Cases
+
+ Sample Test Case 1 (Given)
+Input
+5
+1 2 3 4 5
+3
+
+Output
+3 4 5
+
+
+Test Case 2
+Input
+4
+10 4 7 2
+6
+
+Output
+10 7
+
+
+Test Case 3
+Input
+3
+5 6 7
+8
+
+Output
+(No values ≥ 8 → output is empty)
+-----------------------------------------------------------------------------------------
+Question 9 — Process Strings Using an Inner Function Class
+Scenario:
+ A text-processing tool receives multiple input strings and needs to analyze their lengths for formatting and validation.
+ To make the transformation reusable, the main class includes an inner class that implements:
+Function<String, Integer>
+
+This inner class should take a string and return its length.
+Your task:
+Read n strings
+Use an inner Function class to compute the length of each string
+Print all lengths in order
+
+
+ Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+3
+abc def ghi
+
+Output
+3 3 3
+
+
+Test Case 2
+Input
+4
+hello hi ok java
+
+Output
+5 2 2 4
+
+
+Test Case 3
+Input
+2
+x yz
+
+Output
+1 2
+--------------------------------------------------------------------------------------------------
+ Question 10 — Sort Strings Using an Anonymous Comparator
+Scenario:
+ A file management tool displays file names that users upload.
+ Before showing them on the dashboard, the names must be sorted alphabetically.
+ Instead of creating a separate class, an anonymous Comparator<String> is used directly inside the sorting logic.
+Your task:
+Read n strings
+
+
+Sort them lexicographically (A → Z) using an anonymous Comparator class
+
+
+Print the sorted strings in ascending order
+
+
+Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+3
+Charlie Alice Bob
+
+Output
+Alice Bob Charlie
+
+
+Test Case 2
+Input
+4
+zulu alpha mango beta
+
+Output
+alpha beta mango zulu
+
+
+Test Case 3
+Input
+2
+dog cat
+
+Output
+cat dog
+--------------------------------------------------------------------------------------------------
+Question 11 — Execute Tasks Using an Anonymous Runnable
+Scenario:
+ A background processing system needs to run several small jobs such as sending notifications, clearing logs, and updating analytics.
+ Instead of defining a separate Runnable class, the system uses an anonymous class implementing Runnable to quickly create threads on the fly.
+Your task:
+Read n task names
+
+
+For each task, create a thread using an anonymous Runnable class
+
+
+Each thread should print its task name
+
+
+The final output may appear in any order because threads run independently
+
+
+Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+3
+Task1 Task2 Task3
+
+Output
+Task1 Task2 Task3
+
+(Order may vary)
+
+Test Case 2
+Input
+2
+Email Backup
+
+Output
+Email Backup
+
+Test Case 3
+Input
+4
+A B C D
+
+Output
+A B C D
+----------------------------------------------------------------------------------------------------
+Question 12 — Process Strings Using an Anonymous Function
+Scenario:
+ A text-analysis tool needs to quickly compute the length of each input string to check formatting constraints (like minimum or maximum allowed characters).
+ To avoid creating a separate class, developers use an anonymous class implementing:
+Function<String, Integer>
+
+This anonymous Function should take a string and return its length.
+Your task:
+Read n strings
+
+
+Use an anonymous Function<String, Integer> to compute the length of each string
+
+
+Print the lengths in the same order as the input
+
+
+Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+3
+abc def ghi
+
+Output
+3 3 3
+
+Test Case 2
+Input
+4
+hello hi ok java
+
+Output
+5 2 2 4
+
+Test Case 3
+Input
+2
+x yz
+
+Output
+1 2
+-------------------------------------------------------------------------------------------------------
+Question 13 — Sort Product Objects by Price Using an Anonymous Comparator
+Scenario:
+ An e-commerce platform displays a list of products to users.
+ To show the best (highest-priced) items first, the products must be sorted in descending order of price.
+ Instead of writing a separate Comparator class, the system uses an anonymous Comparator<Product> directly inside the sorting logic.
+Each Product object contains:
+id (Integer)
+
+
+name (String)
+
+
+price (Integer)
+
+
+Your task:
+Read n product records
+
+
+Use an anonymous Comparator<Product> to sort the products by price (high → low)
+
+
+Print only the product names in sorted order
+
+
+Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+3
+1 Laptop 1000
+2 Phone 500
+3 Tablet 300
+
+Output
+Laptop Phone Tablet
+
+Test Case 2
+Input
+4
+10 TV 800
+11 AC 1200
+12 Fan 200
+13 Heater 600
+
+Output
+AC TV Heater Fan
+
+Test Case 3
+Input
+2
+5 Book 50
+6 Chair 150
+
+Output
+Chair Book
+----------------------------------------------------------------------------------------------------------
+Question 14 — Sort Strings Using a Lambda-Based Comparator
+Scenario:
+ A chat application stores usernames as they join a group.
+ Before displaying the participant list, the names must be sorted alphabetically.
+ Instead of using a standalone or anonymous class, the sorting must be performed using a lambda expression that implements Comparator<String>.
+Your task:
+Read n strings (usernames)
+
+
+Use a lambda Comparator to sort them lexicographically (A → Z)
+
+
+Print the sorted strings in ascending order
+
+
+Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+3
+Charlie Alice Bob
+
+Output
+Alice Bob Charlie
+
+
+Test Case 2
+Input
+4
+zulu alpha mango beta
+
+Output
+alpha beta mango zulu
+
+
+Test Case 3
+Input
+2
+dog cat
+
+Output
+cat dog
+
+--------------------------------------------------------------------------------------------------------
+Question 15 — Sort Employee Objects by Salary Using a Lambda Comparator
+Scenario:
+ A company's HR portal displays employee records.
+ To prepare a performance-based salary report, employees must be sorted by salary in descending order.
+ Instead of creating a separate Comparator class, the sorting must be done using a lambda expression.
+Each Employee object contains:
+id (Integer)
+
+
+name (String)
+
+
+salary (Integer)
+
+
+Your task:
+Read n employee records
+
+
+Sort the employees by salary (high → low) using a lambda Comparator<Employee>
+
+
+Print only the employee names in sorted order
+
+
+Sample Test Cases
+Sample Test Case 1 (Given)
+Input
+3
+1 Alice 50000
+2 Bob 60000
+3 Charlie 45000
+
+Output
+Bob Alice Charlie
+
+
+Test Case 2
+Input
+4
+10 John 70000
+11 Emma 95000
+12 Sam 70000
+13 Lily 80000
+
+Output
+Emma Lily John Sam
+
+(Two employees have 70000, order between them may vary)
+
+Test Case 3
+Input
+2
+5 David 40000
+6 Eva 90000
+
+Output
+Eva David
+
+====================================================================================================
+Question 1 — Filter Strings Longer Than k Characters Using Predicate
+Scenario:
+ A content moderation system processes user-submitted words and needs to filter out only those words that are longer than a given length k.
+ To implement flexible filtering logic, the system uses a Predicate<String>.
+Your task:
+Read n strings
+
+
+Read an integer k
+
+
+Use a Predicate<String> to filter and print only the strings whose length > k
+
+
+Sample Test Case (Given)
+Input
+5 3
+abc def ghi jklm nop
+
+Output
+jklm
+
+Explanation:
+ Only “jklm” has length > 3.
+
+Additional Test Case 2
+Input
+4 2
+hi cat dog sun
+
+Output
+cat dog sun
+
+Additional Test Case 3
+Input
+3 5
+hello world java
+
+Output
+world
+----------------------------------------------------------------------------------------------------
+Question 2 — Transform Integers to Their Squares Using Function
+Scenario:
+ A math learning app processes students’ answers and needs to generate square values for practice sheets.
+ To keep the transformation logic reusable, the system uses a Function<Integer, Integer> that maps each number to its square.
+Your task:
+Read n integers
+
+
+Use a Function<Integer, Integer> to convert each number into its square
+
+
+Print all squared values in the same order
+
+
+Sample Test Case (Given)
+Input
+5
+1 2 3 4 5
+
+Output
+1 4 9 16 25
+
+Additional Test Case 2
+Input
+4
+10 20 30 40
+
+Output
+100 400 900 1600
+
+Additional Test Case 3
+Input
+3
+7 8 9
+
+Output
+49 64 81
+------------------------------------------------------------------------------------------------
+Question 3 — Print Strings Using a Consumer
+Scenario:
+ A notification broadcasting system processes a list of messages and prints each message to the console or log.
+ To separate printing logic from data processing, the system uses a Consumer<String>, which simply performs an action on each string — in this case, printing it.
+Your task:
+Read n strings
+Use a Consumer<String> to print each string
+Print all strings on a single line, separated by spaces
+
+
+Sample Test Case (Given)
+Input
+3
+Alice Bob Charlie
+
+Output
+Alice Bob Charlie
+
+Additional Test Case 2
+Input
+2
+Hello World
+
+Output
+Hello World
+
+Additional Test Case 3
+Input
+4
+A B C D
+
+Output
+A B C D
+-------------------------------------------------------------------------------------------------------
+Question 4 — Concatenate Pairs of Strings Using a BiFunction
+Scenario:
+ A form-processing system collects first names and last names separately.
+ To generate usernames or display full names, two strings must be combined together.
+ To modularize this logic, the system uses a BiFunction<String, String, String> that takes two strings and returns their concatenation.
+Your task:
+Read n pairs of strings
+Use a BiFunction<String, String, String> to concatenate each pair
+Print all concatenated results on a single line
+
+
+Sample Test Case (Given)
+Input
+3
+Alice Bob
+Charlie Dave
+Eve Fred
+
+Output
+AliceBob CharlieDave EveFred
+
+Additional Test Case 2
+Input
+2
+Hello World
+Good Morning
+
+Output
+HelloWorld GoodMorning
+
+Additional Test Case 3
+Input
+3
+A B
+Cat Dog
+Java Code
+
+Output
+AB CatDog JavaCode
+---------------------------------------------------------------------------------------------------------
+Question 5 — Filter Numbers Divisible by k Using Predicate
+Scenario:
+ A data validation system needs to extract numeric values that satisfy a divisibility rule (e.g., values divisible by 3, 5, 10, etc.).
+ To keep filtering logic concise and reusable, the system uses a Predicate<Integer> that checks whether a number is divisible by k.
+Your task:
+Read n numbers
+Read a divisor k
+Use a Predicate<Integer> to filter and print only the numbers that are divisible by k
+
+
+Sample Test Case (Given)
+Input
+5 3
+1 2 3 4 5
+
+Output
+3
+
+Test Case 2
+Input
+6 2
+10 15 20 25 30 35
+
+Output
+10 20 30
+
+
+Additional Test Case 3
+Input
+4 5
+5 11 15 22
+
+Output
+5 15
+-----------------------------------------------------------------------------------------------------
+Question 6 — Convert Strings to Uppercase Using a Function
+Scenario:
+ A messaging application needs to normalize user input by converting all words to uppercase before storing or displaying them.
+ To modularize the transformation logic, the system uses a Function<String, String> that converts any given string to its uppercase form.
+Your task:
+Read n strings
+Apply a Function<String, String> to convert each string into uppercase
+Print the results in the same order as input
+
+
+
+Sample Test Case (Given)
+Input
+3
+alice bob charlie
+
+Output
+ALICE BOB CHARLIE
+
+
+Additional Test Case 2
+Input
+4
+hello world java code
+
+Output
+HELLO WORLD JAVA CODE
+
+
+Additional Test Case 3
+Input
+2
+Hi Bye
+
+Output
+HI BYE
+
+-----------------------------------------------------------------------------------------------
+Question 7 — Append a Suffix to Strings Using a Consumer
+Scenario:
+ A file management system appends a standard suffix to every filename before uploading it to cloud storage.
+ To achieve this cleanly, the system uses a Consumer<String> that processes each string by appending the given suffix and then printing the modified string.
+Your task:
+Read n strings
+Read a suffix
+Use a Consumer<String> to append the suffix to each string
+Print all modified strings in the same order
+
+
+Sample Test Case (Given)
+Input
+3
+Alice Bob Charlie
+suffix
+
+Output
+Alice_suffix Bob_suffix Charlie_suffix
+
+Test Case 2
+Input
+2
+file1 file2
+backup
+
+Output
+file1_backup file2_backup
+
+Test Case 3
+Input
+4
+A B C D
+X
+
+Output
+A_X B_X C_X D_X
+--------------------------------------------------------------------------------------------------------
+Question 8 — Supply Constant Strings Using a Supplier
+Scenario:
+ A logging system repeatedly needs a default message (e.g., "OK", "READY", "SUCCESS") for system heartbeat monitoring.
+ To provide this constant message whenever required, a Supplier<String> is used.
+ A Supplier takes no input and simply returns the same string each time it is called.
+Your task:
+Read an integer n
+Read a string s
+Use a Supplier<String> to supply the same string s a total of n times
+Print the string repeatedly in one line
+
+
+Sample Test Case (Given)
+Input
+3
+Hello
+
+Output
+Hello Hello Hello
+
+Test Case 2
+Input
+5
+OK
+
+Output
+OK OK OK OK OK
+
+Test Case 3
+Input
+2
+Ready
+
+Output
+Ready Ready
+-------------------------------------------------------------------------------------------------------
+Question 9 — Compute Product of Number Pairs Using a BiFunction
+Scenario:
+ A mathematical computation engine processes pairs of numbers representing dimensions, weights, or measurements.
+ For each pair, the engine must compute their product.
+ To modularize the computation, it uses a BiFunction<Integer, Integer, Integer>, which takes two integers and returns their product.
+Your task:
+Read n pairs of integers
+Use a BiFunction<Integer, Integer, Integer> to compute the product of each pair
+Print all results on a single line
+
+
+Sample Test Case (Given)
+Input
+3
+1 2
+3 4
+5 6
+
+Output
+2 12 30
+
+Test Case 2
+Input
+2
+10 10
+7 8
+
+Output
+100 56
+
+Test Case 3
+Input
+4
+2 3
+4 5
+6 7
+8 9
+
+Output
+6 20 42 72
+-------------------------------------------------------------------------------------------------------
+Question 10 — Filter Students by Grade Using a Predicate
+Scenario:
+ A college grading system needs to identify all students who meet a minimum grade requirement for scholarships or eligibility criteria.
+ To implement this filtering rule, the system uses a Predicate<Student> that checks whether a student's grade is greater than or equal to a given threshold.
+Each Student object contains:
+id (Integer)
+name (String)
+grade (Integer)
+
+
+Your task:
+Read n Student records
+Read a grade threshold
+Use a Predicate<Student> to filter and print names of students whose grade ≥ threshold
+
+
+Sample Test Case (Given)
+Input
+3
+1 Alice 90
+2 Bob 85
+3 Charlie 95
+90
+
+Output
+Alice Charlie
+
+Test Case 2
+Input
+4
+10 David 70
+11 Emma 92
+12 Frank 88
+13 Grace 95
+90
+
+Output
+Emma Grace
+
+Test Case 3
+Input
+2
+5 John 50
+6 Mary 40
+60
+
+Output
+(No student meets threshold)
+---------------------------------------------------------------------------------------------------
+Question 11 — Extract Names from Employee Objects Using a Function
+Scenario:
+ An HR reporting tool receives a list of employee records and needs to extract only the names for generating ID cards, attendance sheets, and reports.
+ To modularize this transformation, the system uses a Function<Employee, String> that takes an Employee object and returns its name.
+Each Employee object contains:
+id (Integer)
+name (String)
+salary (Integer)
+
+
+Your task:
+Read n employee records
+Use a Function<Employee, String> to extract the name of each employee
+Print all names in order
+
+
+Sample Test Case (Given)
+Input
+3
+1 Alice 50000
+2 Bob 60000
+3 Charlie 45000
+
+Output
+Alice Bob Charlie
+
+Test Case 2
+Input
+2
+10 David 70000
+11 Emma 90000
+
+Output
+David Emma
+
+Test Case 3
+Input
+4
+5 John 40000
+6 Mary 55000
+7 Joe 30000
+8 Nina 95000
+
+Output
+John Mary Joe Nina
+
+------------------------------------------------------------------------------------------------------
+Question 12 — Log Product Details Using a Consumer
+Scenario:
+ An inventory management system processes product information and needs to log each product's name and price for auditing or display purposes.
+ To achieve clean and reusable logging logic, the system uses a Consumer<Product> that prints a product in the format:
+name:price
+
+Each Product object contains:
+id (Integer)
+name (String)
+price (Integer)
+
+
+Your task:
+Read n Product records
+Use a Consumer<Product> to log each product as name:price
+Print the logged details in one line, separated by spaces
+
+
+Sample Test Case (Given)
+Input
+3
+1 Laptop 1000
+2 Phone 500
+3 Tablet 300
+
+Output
+Laptop:1000 Phone:500 Tablet:300
+
+Test Case 2
+Input
+2
+10 Pen 20
+11 Pencil 10
+
+Output
+Pen:20 Pencil:10
+
+Test Case 3
+Input
+4
+1 Bag 700
+2 Shoes 1500
+3 Cap 200
+4 Watch 2500
+
+Output
+Bag:700 Shoes:1500 Cap:200 Watch:2500
+--------------------------------------------------------------------------------------------------
+Question 13 — Compare Number Pairs Using a BiPredicate
+Scenario:
+ A rule engine processes numeric inputs and must evaluate comparison conditions for decision-making.
+ One such rule checks whether the first number is less than the second.
+ This logic is implemented using a BiPredicate<Integer, Integer> that returns:
+true → if first < second
+false → otherwise
+
+
+Your task:
+Read n pairs of integers
+For each pair, evaluate the BiPredicate
+Print the results (true or false) in the same order
+
+
+Sample Test Case (Given)
+Input
+3
+6 2
+3 4
+5 6
+
+Output
+false true true
+
+Test Case 2
+Input
+4
+1 2
+10 5
+7 9
+8 8
+
+Output
+true false true false
+
+Test Case 3
+Input
+2
+100 200
+300 100
+
+Output
+true false
+---------------------------------------------------------------------------------------------------
+Question 14 — Transform Strings to Their Lengths Using a UnaryOperator
+Scenario:
+ A text-processing module validates incoming words by converting them into their length values for further analysis (e.g., checking minimum or maximum allowed size).
+ To implement this transformation in a concise, functional way, the system uses a UnaryOperator<String>, which takes a string and returns another string representing its length.
+Your task:
+Read n strings
+Use a UnaryOperator<String> to transform each string into its length
+Print all the resulting lengths
+
+
+Sample Test Case (Given)
+Input
+3
+abc def ghi
+
+Output
+3 3 3
+
+Test Case 2
+Input
+4
+hello hi ok java
+
+Output
+5 2 2 4
+
+Test Case 3
+Input
+2
+x yz
+
+Output
+1 2
+
+------------------------------------------------------------------------------------------------------
+Question 15 — Filter Strings Starting With a Given Prefix Using a Predicate
+Scenario:
+ A search suggestion engine needs to display only those words that start with a specific prefix typed by the user.
+ To implement this matching rule, the system uses a Predicate<String> that checks whether each string begins with the given prefix.
+Your task:
+Read an integer n
+Read a prefix
+Read n strings
+Use a Predicate<String> to filter and print only the strings that start with the given prefix
+Preserve the original input order
+
+
+Sample Test Case (Given)
+Input
+5
+A
+Apple Banana Apricot Cat Dog
+
+Output
+Apple Apricot
+
+Test Case 2
+Input
+4
+Ca
+Cat Car Bus Cap
+
+Output
+Cat Car Cap
+
+Test Case 3
+Input
+3
+Hi
+High Hill River
+
+Output
+High Hill
+-----------------------------------------------------------------------------------------------------------
